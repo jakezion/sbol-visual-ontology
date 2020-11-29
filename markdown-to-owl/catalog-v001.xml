@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="file:popsreceiver_sbolowl.rdf" uri="popsreceiver_sbolowl.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://sbols.org/v2" uri="popsreceiver_sbolowl.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://sbols.org/v2" uri="https://dissys.github.io/sbol-owl/examples/popsreceiver_sbolowl.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1569243372874" name="http://biomodels.net/SBO/" uri="sbo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1569243372874" name="http://sbolstandard.org/visual" uri="sbol-vo.rdf"/>
+    </group>
+</catalog>
