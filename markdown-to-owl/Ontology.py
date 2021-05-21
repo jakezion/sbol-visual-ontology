@@ -74,6 +74,7 @@ with onto:
     AllDisjoint([InteractionGlyph, InteractionNodeGlyph,MolecularSpeciesGlyph, SequenceFeatureGlyph])
     
 
+'''
 onto2 = get_ontology("http://test.org/onto.owl")
 with onto2:
     class Drug(Thing):
@@ -81,7 +82,7 @@ with onto2:
     class ActivePrinciple(Thing):
         pass
     AllDisjoint([Drug, ActivePrinciple])
-    
+ '''   
     
 #, MolecularSpeciesGlyph, SequenceFeatureGlyph)     
 
@@ -157,10 +158,13 @@ def getCategoryGlyph(sbolVisualMD):
         return InteractionGlyph
     elif "/InteractionNodes/" in sbolVisualMD.getDirectory():
         return InteractionNodeGlyph
-    elif "/FunctionalComponents/" in sbolVisualMD.getDirectory():
+    elif "/MolecularSpecies/" in sbolVisualMD.getDirectory():
+        return MolecularSpeciesGlyph
+    elif "/SequenceFeatures/" in sbolVisualMD.getDirectory():
         return MolecularSpeciesGlyph
     else: 
-        return SequenceFeatureGlyph
+        print("ERROR: Unrecognised glyph category" + sbolVisualMD.getDirectory())
+        return None
     
 
 def createOntologyClass(termName, baseClass, ns):
@@ -175,23 +179,13 @@ def addImage(ontologyClass,imageDirectory, image):
     #ontologyClass.hasGlyph=imgClass
     ontologyClass.defaultGlyph=image
     ontologyClass.glyphDirectory=imageDirectory
-    
-        
-def createVisualTermORG_Del(sbolVisualMD,termName):
-    sbolVisualTerm = createOntologyClass(termName, onto.Glyph, onto)
-    categoryGlyph=getCategoryGlyph(sbolVisualMD)
-    sbolVisualTerm.is_a.append(categoryGlyph)
-    sbolVisualTerm.comment=sbolVisualMD.getComment()  
-    sbolVisualTerm.prototypicalExample=sbolVisualMD.getExample()
-    sbolVisualTerm.notes=sbolVisualMD.getNotes()
-    return sbolVisualTerm
 
 def createVisualTerm(sbolVisualMD,termName):
     sbolVisualTerm = createOntologyClass(termName, onto.Glyph, onto)
     categoryGlyph=getCategoryGlyph(sbolVisualMD)
     if categoryGlyph==InteractionGlyph:
         createInteractionEdgeConstraints(sbolVisualTerm, sbolVisualMD)
-    if categoryGlyph==InteractionNodeGlyph:
+    elif categoryGlyph==InteractionNodeGlyph:
         createInteractionNodeConstraints (sbolVisualTerm, sbolVisualMD)
     sbolVisualTerm.is_a.append(categoryGlyph)
     sbolVisualTerm.comment=sbolVisualMD.getComment()  
@@ -199,14 +193,6 @@ def createVisualTerm(sbolVisualMD,termName):
     sbolVisualTerm.notes=sbolVisualMD.getNotes()
     return sbolVisualTerm
 
-''' GM: 20200902- Commented the previous working copy
-def createVisualTerm(sbolVisualMD,termName):
-    sbolVisualTerm = createOntologyClass(termName, onto.Glyph, onto)
-    sbolVisualTerm.comment=sbolVisualMD.getComment()  
-    sbolVisualTerm.prototypicalExample=sbolVisualMD.getExample()
-    sbolVisualTerm.notes=sbolVisualMD.getNotes()
-    return sbolVisualTerm
-'''
 
 def getOntologyTermsFromLabels(glyphTypes):
     allOntologyTerms=[]
@@ -258,6 +244,8 @@ def createInteractionEdgeConstraints(sbolVisualTerm, sbolVisualMD):
             for ontologyTerm in ontologyTerms :
                 #Use append rather than assigning to avoid overriding the previous subclass relationships.
                 sbolVisualTerm.hasHead.append(sbol2.role.some(ontologyTerm))
+        else:
+            print ("------ " + sbolVisualTerm.label[0] + " - No head term!")
             
     tailTerms=sbolVisualMD.getTailTypes()
     if tailTerms:
@@ -266,7 +254,9 @@ def createInteractionEdgeConstraints(sbolVisualTerm, sbolVisualMD):
         if ontologyTerms:
             for ontologyTerm in ontologyTerms :
                 #Use append rather than assigning to avoid overriding the previous subclass relationships.
-                sbolVisualTerm.hasTail.append(sbol2.role.some(ontologyTerm))       
+                sbolVisualTerm.hasTail.append(sbol2.role.some(ontologyTerm))  
+        else:
+            print ("------ " + sbolVisualTerm.label[0] + " - No tail term!")             
  
 def createInteractionNodeConstraints(sbolVisualTerm, sbolVisualMD):
     headTerms=sbolVisualMD.getIncomingTypes()
@@ -277,6 +267,8 @@ def createInteractionNodeConstraints(sbolVisualTerm, sbolVisualMD):
             for ontologyTerm in ontologyTerms :
                 #Use append rather than assigning to avoid overriding the previous subclass relationships.
                 sbolVisualTerm.hasIncoming.append(sbol2.role.some(ontologyTerm))
+        else:
+            print ("------ " + sbolVisualTerm.label[0] + " - No incoming term!")  
             
     tailTerms=sbolVisualMD.getOutgoingTypes()
     if tailTerms:
@@ -285,7 +277,9 @@ def createInteractionNodeConstraints(sbolVisualTerm, sbolVisualMD):
         if ontologyTerms:
             for ontologyTerm in ontologyTerms :
                 #Use append rather than assigning to avoid overriding the previous subclass relationships.
-                sbolVisualTerm.hasOutgoing.append(sbol2.role.some(ontologyTerm))     
+                sbolVisualTerm.hasOutgoing.append(sbol2.role.some(ontologyTerm))
+        else:
+            print ("------ " + sbolVisualTerm.label[0] + " - No outgoing term!")               
                
 def createImageConstraints(sbolVisualTerm, allOntologyTerms):
     ontologyTerms=[]
@@ -376,10 +370,7 @@ def createRecommendedTerms(sbolVisualMD, baseTerm, glyphBlocks, blockIndex,glyph
         if len(glyphTypes)>1:
             recommendedOntologyTerms=getOntologyTermsFromLabelsForEachRow(glyphTypes[index])
             createImageConstraints(recommendedSubTerm, [recommendedOntologyTerms])
-            
-        else:
-            test=""
-            test=test + "sdf"
+
         recommendedSubTerms.append(recommendedSubTerm)   
         index=index+1
     #If there is only one glyph type included, then there is no need to copy it to all recommended terms. These recommended terms 

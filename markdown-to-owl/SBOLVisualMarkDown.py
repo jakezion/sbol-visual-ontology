@@ -61,7 +61,7 @@ class SBOLVisualMarkDown (object):
                 else:
                     items=[]
                     allTerms.append(items)
-                    print ("---No Ontology term specified!")   
+                    print ("--- No Ontology term specified in line: " + line)   
         return allTerms   
     
     ''' Associated SBO term(s)
