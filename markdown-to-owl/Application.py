@@ -6,8 +6,8 @@ Created on 29 Mar 2019
 import types
 from MarkDown import *
 from Ontology import *
-
 import os
+
 from numpy.distutils.exec_command import filepath_from_subprocess_output
 
 # sbolVisualDir= "../../SBOL-visual/Glyphs"
