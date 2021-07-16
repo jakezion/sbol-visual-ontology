@@ -128,7 +128,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An arrow whose head is a bar, suggesting blocking:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InhibitionGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibition-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/Interactions/inhibition</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/Interactions/inhibition</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repression of pTAL14 promoter by TAL14</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left intentionally blank*</notes>
@@ -168,7 +168,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identical to the Process glyph, but with an empty set at the sink of the arrowhead:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DegradationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degradation-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/Interactions/degradation</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/Interactions/degradation</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cellular recycling of mRNA</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left intentionally blank*</notes>
@@ -219,7 +219,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An arrow with an head that is empty or of a different color than the line:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StimulationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stimulation-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/Interactions/stimulation</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/Interactions/stimulation</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activation of pTAL14 promoter by Gal4VP16 activator</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left intentionally blank*</notes>
@@ -270,7 +270,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An arrow with a diamond head:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ControlGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">control-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/Interactions/control</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/Interactions/control</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inversion of a sequence flanked by FRT sites by FLP recombinase</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left intentionally blank*</notes>
@@ -332,7 +332,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An arrow with a filled head the same color as the line:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProcessGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">process-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/Interactions/process</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/Interactions/process</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production of Green Fluorescent Protein (GFP) from the gfp Coding Sequence</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assocated SBO term also covers:
@@ -387,7 +387,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A circular node:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssociationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">association-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/InteractionNodes/association</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/InteractionNodes/association</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Association of gRNA and Cas9 to form an active CRISPR complex.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The association glyph is based on the SBGN Process Description association glyph.</notes>
@@ -427,7 +427,7 @@
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified is represented by the unicode "replacement character" glyph, indicating a missing or invalid symbol:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnspecifiedGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unspecified-glyph-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/InteractionNodes/unspecified</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/InteractionNodes/unspecified</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An interaction that is missing any information about its nature or intended purpose.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that there are no outgoing edges for the Unspecified interaction, because there is no difference in roles to indicate.
@@ -480,7 +480,7 @@ The Unspecified glyph is intended for showing where information about an interac
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An circular node inside another circle</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DissociationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dissociation-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/InteractionNodes/dissociation</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/InteractionNodes/dissociation</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dissociation of an active CRISPR complex into gRNA and Cas9.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The dissociation glyph is based on the SBGN Process Description dissociation glyph.</notes>
@@ -531,7 +531,7 @@ The Unspecified glyph is intended for showing where information about an interac
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A square node:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProcessNodeGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">process-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/InteractionNodes/process</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/InteractionNodes/process</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction process of citrate and aconitase to produce cis-aconitate.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process glyph is based on the SBGN Process Description process glyph.
@@ -571,7 +571,7 @@ Examples of RECOMMENDED usage:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The macromolecule glyph is a rounded rectangle, as used in SBGN:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MacromoleculeGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">macromolecule-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/macromolecule</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/macromolecule</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AraC protein, polymerized chitin</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The alternative "shmoo" shape from SBOL Visual 2 is no longer valid, having been deprecated for looking too similar to a typical representation of a yeast cell.</notes>
@@ -600,7 +600,7 @@ Examples of RECOMMENDED usage:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The RECOMMENDED glyph for dsNA is a double-helix:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Double-StrandedNucleicAcidGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsNA-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/dsNA</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/dsNA</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DNA fragment during assembly</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -617,7 +617,7 @@ Examples of RECOMMENDED usage:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alternative is the SBGN "nucleic acid" half-round rectangle:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Double-StrandedNucleicAcidGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">na-sbgn-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/dsNA</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/dsNA</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#ComplexGlyph">
@@ -651,7 +651,7 @@ Examples of RECOMMENDED usage:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The RECOMMENDED glyph for a complex is a composite of the glyphs for the molecules comprising the complex.  For example, a protein bound to a simple chemical, a guide RNA, or another protein (in order:protein-small molecule, protein-guide RNA, protein-protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinSmallMoleculeComplexGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex-ps-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/complex</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/complex</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -660,7 +660,7 @@ Examples of RECOMMENDED usage:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The RECOMMENDED glyph for a complex is a composite of the glyphs for the molecules comprising the complex.  For example, a protein bound to a simple chemical, a guide RNA, or another protein (in order:protein-small molecule, protein-guide RNA, protein-protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinGuideRnaComplexGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex-pr-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/complex</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/complex</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -669,7 +669,7 @@ Examples of RECOMMENDED usage:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The RECOMMENDED glyph for a complex is a composite of the glyphs for the molecules comprising the complex.  For example, a protein bound to a simple chemical, a guide RNA, or another protein (in order:protein-small molecule, protein-guide RNA, protein-protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinProteinComplexGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex-pp-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/complex</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/complex</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -685,7 +685,7 @@ Examples of RECOMMENDED usage:
 An alternative is the SBGN "cornered rectangle" glyph for a complex:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ComplexGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complex-sbgn-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/complex</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/complex</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#Single-StrandedNucleicAcidGlyph">
@@ -711,7 +711,7 @@ An alternative is the SBGN "cornered rectangle" glyph for a complex:</rdfs:comme
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The RECOMMENDED glyph for ssNA is a wiggly line:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single-StrandedNucleicAcidGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssNA-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/ssNA</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/ssNA</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mRNA, gRNA, siRNA</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -728,7 +728,7 @@ An alternative is the SBGN "cornered rectangle" glyph for a complex:</rdfs:comme
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alternative is the SBGN "nucleic acid" half-round rectangle:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single-StrandedNucleicAcidGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">na-sbgn-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/ssNA</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/ssNA</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#ProteinGlyph">
@@ -754,7 +754,7 @@ An alternative is the SBGN "cornered rectangle" glyph for a complex:</rdfs:comme
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The protein glyph is a "pill" shape with a rectangular body and rounded ends, representing the compact space-filling mass of many proteins:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/protein</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/protein</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AraC protein</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To avoid confusion with circles or ellipses, the "pill" shape SHOULD be significantly longer than it is tall, emphasizing its straight sides.</notes>
@@ -783,7 +783,7 @@ An alternative is the SBGN "cornered rectangle" glyph for a complex:</rdfs:comme
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified is RECOMMENDED to be represented by the unicode "replacement character" glyph, indicating a missing or invalid symbol:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnspecifiedSpeciesGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">replacement-glyph-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/unspecified</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/unspecified</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An anonymous chemical species that is missing any information about its nature or intended purpose.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Unspecified glyph is intended for showing where a chemical species' type is missing (or, equivalently, given only the uninformative root role). It should never appear with well-curated designs or diagrams.</notes>
@@ -800,7 +800,7 @@ An alternative is the SBGN "cornered rectangle" glyph for a complex:</rdfs:comme
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alternative is the SBGN "generic species" glyph, which is an ellipse:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnspecifiedSpeciesGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">generic-sbgn-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/unspecified</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/unspecified</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#NoGlyphAssignedGlyph">
@@ -811,7 +811,7 @@ An alternative is the SBGN "cornered rectangle" glyph for a complex:</rdfs:comme
 An alternative option is to have a bracket, suggesting information that needs to be filled in:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoGlyphAssignedGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no-glyph-assigned-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/no-glyph-assigned</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/no-glyph-assigned</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Glyph Assigned is intended to be used for any chemical species whose type is not covered by other SBOL Visual glyphs.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Glyph Assigned is intended for molecular species with a defined specific type that happens to not yet be covered by available approved glyphs (other than the root). It is more likely to appear in machine-generated diagrams than in human-generated diagrams, since humans are likely to invent and use their own glyph for the purpose.</notes>
@@ -852,7 +852,7 @@ To avoid confusion with pills or ellipses, when the small circle alternative gly
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The simple chemical glyph is any one of three small polygonal shapes, triangle, pentagon, or hexagon (in order: triangle, pentagon, hexagon):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TriangleSimpleChemicalGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple-chemical-triangle-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/simple-chemical</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/simple-chemical</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -861,7 +861,7 @@ To avoid confusion with pills or ellipses, when the small circle alternative gly
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The simple chemical glyph is any one of three small polygonal shapes, triangle, pentagon, or hexagon (in order: triangle, pentagon, hexagon):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PentagonSimpleChemicalGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple-chemical-pentagon-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/simple-chemical</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/simple-chemical</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -870,7 +870,7 @@ To avoid confusion with pills or ellipses, when the small circle alternative gly
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The simple chemical glyph is any one of three small polygonal shapes, triangle, pentagon, or hexagon (in order: triangle, pentagon, hexagon):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HexagonSimpleChemicalGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple-chemical-hexagon-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/simple-chemical</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/simple-chemical</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -882,7 +882,7 @@ To avoid confusion with pills or ellipses, when the small circle alternative gly
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alternately, a simple chemical may also be represented a small circle:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SimpleChemicalGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple-chemical-circle-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/MolecularSpecies/simple-chemical</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/MolecularSpecies/simple-chemical</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#StabilityElementGlyph">
@@ -933,7 +933,7 @@ To avoid confusion with pills or ellipses, when the small circle alternative gly
 - the stem glyph indicates whether the site affects DNA, RNA, or protein (respectively: straight, wavy, or looped)</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StabilityElementGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stem-top-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/stability-element</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/stability-element</glyphDirectory>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PEST tag, 3’ Hairpin</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RNA Stability Element glyph was previously also associated with SO:0001957, but that SO term has been declared obsolete in Sequence Ontology.
 
@@ -947,7 +947,7 @@ Despite both being stem-top glyphs, Biopolymer Location is not a parent to Stabi
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The top for a Stability Element is a pentagon suggesting the shape of a shield, on top of a stem connecting to the backbone at the point where the stability element is located (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DnaStabilityElementGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dna-stability-element-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/stability-element</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/stability-element</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -973,7 +973,7 @@ Despite both being stem-top glyphs, Biopolymer Location is not a parent to Stabi
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The top for a Stability Element is a pentagon suggesting the shape of a shield, on top of a stem connecting to the backbone at the point where the stability element is located (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RnaStabilityElementGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rna-stability-element-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/stability-element</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/stability-element</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1010,7 +1010,7 @@ Despite both being stem-top glyphs, Biopolymer Location is not a parent to Stabi
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The top for a Stability Element is a pentagon suggesting the shape of a shield, on top of a stem connecting to the backbone at the point where the stability element is located (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinStabilityElementGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein-stability-element-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/stability-element</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/stability-element</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1037,7 +1037,7 @@ Despite both being stem-top glyphs, Biopolymer Location is not a parent to Stabi
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ribosome entry promoter glyph is a half-ovoid sitting on the backbone, suggesting an attached ribosome beginning transcription:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RibosomeEntrySiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ribosome-entry-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/ribosome-entry-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/ribosome-entry-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T7g10 ribosome binding site</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -1066,7 +1066,7 @@ Despite both being stem-top glyphs, Biopolymer Location is not a parent to Stabi
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aptamer glyph is a cartoon diagram of a prototypical nucleic acid secondary structure for an aptamer:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AptamerGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aptamer-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/aptamer</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/aptamer</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theophylline aptamer</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -1096,7 +1096,7 @@ Despite both being stem-top glyphs, Biopolymer Location is not a parent to Stabi
 The glyph to indicate integration into a chromosome is an S-shaped curve of the backbone, suggesting something that might be part of a larger looping structure:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChromosomalLocusGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosomal-locus-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/chromosomal-locus</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/chromosomal-locus</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_B. subtilis_ amyE locus</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complementary "left" and "right" versions of this glyph SHOULD be used together, flanking the region whose genomic context is being described.
@@ -1137,7 +1137,7 @@ Examples of RECOMMENDED usage:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The signature glyph is a box sitting atop the backbone with an X and line inside it, suggesting a signature on a form:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SignatureGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signature-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/signature</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/signature</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DNA Barcode</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -1166,7 +1166,7 @@ Examples of RECOMMENDED usage:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The polyA site glyph is a sequence of As sitting atop the backbone:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PolyASiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polyA-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/polyA</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/polyA</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polyA tail on mammalian coding sequence</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left deliberately blank*</notes>
@@ -1221,7 +1221,7 @@ Biopolymer Location is a "stem-top" glyph for describing small sites. In this sy
 - the stem glyph indicates whether the site affects DNA, RNA, or protein (respectively: straight, wavy, or looped)</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BiopolymerLocationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stem-top-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/location</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/location</glyphDirectory>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRISPR-targeted insertion site, protease site, mutation site</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biopolymer Location is a general glyph for all zero- and one-length sequence features, including insertion and deletion sites and X-ase cut sites.
 
@@ -1263,7 +1263,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The RECOMMENDED top for Biopolymer Location is a circle, reminiscent of a pin stuck into a location (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DnaBiopolymerLocationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location-dna-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/location</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/location</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1300,7 +1300,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The RECOMMENDED top for Biopolymer Location is a circle, reminiscent of a pin stuck into a location (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RnaBiopolymerLocationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location-rna-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/location</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/location</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1337,7 +1337,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The RECOMMENDED top for Biopolymer Location is a circle, reminiscent of a pin stuck into a location (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinBiopolymerLocationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location-protein-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/location</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/location</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1352,7 +1352,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alternative is to have "nothing" for the top, just an extended version of the stem itself (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DnaBiopolymerLocationGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location-dna-no-top-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/location</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/location</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#RnaBiopolymerLocationGlyphAlternative">
@@ -1366,7 +1366,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alternative is to have "nothing" for the top, just an extended version of the stem itself (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RnaBiopolymerLocationGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location-rna-no-top-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/location</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/location</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#ProteinBiopolymerLocationGlyphAlternative">
@@ -1380,7 +1380,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An alternative is to have "nothing" for the top, just an extended version of the stem itself (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinBiopolymerLocationGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location-protein-no-top-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/location</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/location</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#StickyEndRestrictionEnzymeCleavageSiteGlyph">
@@ -1442,7 +1442,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 5' sticky restriction site glyph is an image of the lines along which two strands of DNA will be cut into 5' sticky ends, and the complementary 3' Sticky Restriction Site glyph is a reflection of the 5' Sticky Restriction Site. Vertical position with respect to the backbone is in a break in a single backbone (in order: five-prime, three-prime):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FivePrimeStickyEndRestrictionEnzymeCleavageSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">five-prime-sticky-restriction-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/sticky-restriction-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/sticky-restriction-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1468,7 +1468,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 5' sticky restriction site glyph is an image of the lines along which two strands of DNA will be cut into 5' sticky ends, and the complementary 3' Sticky Restriction Site glyph is a reflection of the 5' Sticky Restriction Site. Vertical position with respect to the backbone is in a break in a single backbone (in order: five-prime, three-prime):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ThreePrimeStickyEndRestrictionEnzymeCleavageSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">three-prime-sticky-restriction-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/sticky-restriction-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/sticky-restriction-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1483,7 +1483,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and between strands of a double backbone (in order: five-prime double stranded, three-prime double stranded):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FivePrimeStickyEndRestrictionEnzymeCleavageSiteGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">five-prime-sticky-restriction-site-specification-doublestrand.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/sticky-restriction-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/sticky-restriction-site</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#ThreePrimeStickyEndRestrictionEnzymeCleavageSiteGlyphAlternative">
@@ -1497,7 +1497,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and between strands of a double backbone (in order: five-prime double stranded, three-prime double stranded):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ThreePrimeStickyEndRestrictionEnzymeCleavageSiteGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">three-prime-sticky-restriction-site-specification-doublestrand.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/sticky-restriction-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/sticky-restriction-site</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#CleavageSiteGlyph">
@@ -1559,7 +1559,7 @@ Describing a Restriction Enzyme Cleavage Site with a vertical line glyph on a DN
 - the stem glyph indicates whether the site affects DNA, RNA, or protein (respectively: straight, wavy, or looped)</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CleavageSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stem-top-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/cleavage-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/cleavage-site</glyphDirectory>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RNAse E site, BamHI</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO:0000061 (which was previously associated with Restriction Enzyme Recognition Site in SBOL Visual 1) is no longer associated with the DNA Cleavage glyph in SBOL Visual 2 or 3, as SO:0000061 refers to the binding site and not the location of cleavage.
 
@@ -1605,7 +1605,7 @@ A 2A self-cleaving polypeptide region (SO:0002224) SHOULD NOT be represented by 
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Cleavage Site top is an "X" suggesting slicing on top of a stem connecting to the backbone at the point where cleavage will occur (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DnaCleavageSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclease-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/cleavage-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/cleavage-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1631,7 +1631,7 @@ A 2A self-cleaving polypeptide region (SO:0002224) SHOULD NOT be represented by 
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Cleavage Site top is an "X" suggesting slicing on top of a stem connecting to the backbone at the point where cleavage will occur (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RnaCleavageSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ribonuclease-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/cleavage-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/cleavage-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1657,7 +1657,7 @@ A 2A self-cleaving polypeptide region (SO:0002224) SHOULD NOT be represented by 
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Cleavage Site top is an "X" suggesting slicing on top of a stem connecting to the backbone at the point where cleavage will occur (in order: DNA, RNA, Protein):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProteinCleavageSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protease-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/cleavage-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/cleavage-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -1684,7 +1684,7 @@ A 2A self-cleaving polypeptide region (SO:0002224) SHOULD NOT be represented by 
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The origin of replication glyph is a circle suggesting the "bulge" opened in a piece of circular DNA when replication is beginning:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OriginofReplicationGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin-of-replication-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/origin-of-replication</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/origin-of-replication</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human herpesvirus-6 OOR</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The label on an origin of replication glyph is RECOMMENDED as the location to label either specifically the identity of the origin of replication or the name of the entire plasmid backbone more generally.</notes>
@@ -1713,7 +1713,7 @@ A 2A self-cleaving polypeptide region (SO:0002224) SHOULD NOT be represented by 
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The primer binding site glyph is a line with a bent end suggesting a partially complementary strand of nucleic acid attaching to the backbone:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrimerBindingSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primer-binding-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/primer-binding-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/primer-binding-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seq-F</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -1742,7 +1742,7 @@ A 2A self-cleaving polypeptide region (SO:0002224) SHOULD NOT be represented by 
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The terminator is a T sitting atop the backbone:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TerminatorGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terminator-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/terminator</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/terminator</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T1 terminator</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -1782,7 +1782,7 @@ A 2A self-cleaving polypeptide region (SO:0002224) SHOULD NOT be represented by 
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The non-coding RNA glyph is a rectangular box whose top is a single-stranded RNA "wiggle":</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-CodingRNAGeneGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ncrna-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/non-coding-rna</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/non-coding-rna</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gRNA sequence for targeting a dCas9 repressor</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left deliberately blank*</notes>
@@ -1812,7 +1812,7 @@ A 2A self-cleaving polypeptide region (SO:0002224) SHOULD NOT be represented by 
 Unspecified is RECOMMENDED to be represented by the unicode "replacement character" glyph, indicating a missing or invalid symbol:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnspecifiedSequenceFeatureGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">replacement-glyph-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/unspecified</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/unspecified</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An anonymous sequence that is missing any information about its nature or intended purpose.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Unspecified glyph is intended for showing where a sequence's role is missing (or, equivalently, given only the uninformative "Sequence Feature" root role). It should never appear with well-curated designs or diagrams.</notes>
@@ -1829,7 +1829,7 @@ Unspecified is RECOMMENDED to be represented by the unicode "replacement charact
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A half-rounded rectangle, the SBGN glyph for a nucleic acid, is an alternative:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnspecifiedSequenceFeatureGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">halfround-rectangle-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/unspecified</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/unspecified</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#CircularPlasmidGlyph">
@@ -1856,7 +1856,7 @@ Unspecified is RECOMMENDED to be represented by the unicode "replacement charact
 The glyph to indicate embedding in a plasmid is a turn of the backbone indicating its circular structure:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CircularPlasmidGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">circular-plasmid-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/circular-plasmid</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/circular-plasmid</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_E. coli_ p15A plasmid</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that for SBOL data representations, circularity SHOULD also be indicated with a type of SO:0000988.
@@ -1877,12 +1877,12 @@ Example of RECOMMENDED usage: a plasmid containing a functional unit consisting 
 The glyph for Composite is dashed "expanding lines" connecting any "base" glyph representing the more abstract composite (e.g., Omitted Detail, or Terminator, or Promoter) to a backbone diagramming the contents of the composite. Note the bounding box is indicating the location of the base glyph, and would scale with that glyph.</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CompositeGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">composite-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/composite</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/composite</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An "expression cassette" containing a ribosome entry site, coding sequence, and terminator.
 
 In this case, the recommended "base" glyph would be Engineered Region.</prototypicalExample>
-  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An "abbreviated" representation of composite, simply indicating that more structure is available, can be made by using short lines and placing only an Omitted Detail glyph in the secondary backbone. For example, here is an example of an abbreviated composite promoter: 
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An "abbreviated" representation of composite, simply indicating that more structure is available, can be made by using short lines and placing only an Omitted Detail glyph in the secondary backbone. For example, here is an example of an abbreviated composite promoter:
 
 ![glyph specification](abbreviated-composite-example.png)
 
@@ -1914,7 +1914,7 @@ and a composite with an Engineered Region of otherwise unspecified content:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intron is designated by a boundaries interrupting CDS, each side having a two-triangle "torn out" edges, suggesting removal from an enclosing coding sequence:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntronGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intron-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/intron</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/intron</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of a coding sequence with three domains: an N-tag (blue), C-tag (yellow), and internal region (red) interrupted by an intron that includes a gRNA non-coding RNA sequence (green):
 
@@ -1945,7 +1945,7 @@ and a composite with an Engineered Region of otherwise unspecified content:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The coding sequence glyph is a "box" with one side bent out arrow-like to show direction:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CDSGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cds-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/cds</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/cds</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">α-Hemoglobin coding sequence</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -1962,7 +1962,7 @@ and a composite with an Engineered Region of otherwise unspecified content:
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alternately, CDS may be represented as a block arrow:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CDSGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cds-arrow-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/cds</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/cds</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#NoGlyphAssignedSequenceFeatureGlyph">
@@ -1974,7 +1974,7 @@ When a part has no assigned glyph it is RECOMMENDED that a user provide their ow
 An alternative is brackets, suggesting information that needs to be filled in:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoGlyphAssignedSequenceFeatureGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no-glyph-assigned-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/no-glyph-assigned</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/no-glyph-assigned</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No Glyph Assigned is intended to be used for any Component that is not covered by other SBOL Visual glyphs.
 
@@ -2005,7 +2005,7 @@ For example, at present there is no glyph recommended for representing a transpo
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The origin of transfer glyph is circular like origin of replication, but also includes an outbound arrow:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OriginofTransferGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin-of-transfer-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/origin-of-transfer</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/origin-of-transfer</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oriT</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left deliberately blank*</notes>
@@ -2035,7 +2035,7 @@ For example, at present there is no glyph recommended for representing a transpo
 Engineered Region is represented by a plain rectangle suggesting a blank slate to be written upon:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EngineeredRegionGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">engineered-region-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/engineered-region</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/engineered-region</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An "expression cassette" containing a ribosome entry site, coding sequence, and terminator.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -2064,7 +2064,7 @@ Engineered Region is represented by a plain rectangle suggesting a blank slate t
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A polypeptide region inside a coding sequence is indicated by insertion of triangular boundaries inside of the CDS, parallel to the 3' side of the CDS.  This will produce chevron segments on the 3' side and a CDS shape on the 5' side:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PolypeptideRegionGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polypeptide-region-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/polypeptide-region</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/polypeptide-region</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degradation tag on a protein coding sequence
 
@@ -2103,7 +2103,7 @@ This glyph is intended to be used in composition or superposition with the glyph
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The inert DNA spacer glyph is a circle with an X in its middle, suggesting the intent to cancel possible interactions:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InertDNASpacerGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inert-dna-spacer-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/inert-dna-spacer</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/inert-dna-spacer</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inserted 5' sequence intended to reduce effect of upstream genetic context on promoter behavior.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -2132,7 +2132,7 @@ This glyph is intended to be used in composition or superposition with the glyph
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The blunt restriction site glyph is an image of two brackets facing away from one another to make a smooth-edged gap:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BluntRestrictionSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blunt-restriction-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/blunt-restriction-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/blunt-restriction-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EcoRV restriction site</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -2144,7 +2144,7 @@ This glyph is intended to be used in composition or superposition with the glyph
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Omitted Detail glyph is a break in the backbone with an ellipsis to indicate that material would normally be in that location:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OmittedDetailGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">omitted-detail-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/omitted-detail</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/omitted-detail</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diagram in which a sequence feature is not drawn.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This glyph actually places a "break" in the nucleic acid backbone.</notes>
@@ -2199,7 +2199,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
 - the stem glyph indicates whether the site affects DNA, RNA, or protein (respectively: straight, wavy, or looped)</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StopSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stem-top-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/stop-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/stop-site</glyphDirectory>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location where a terminator causes transcription to stop, stop codon</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that the number of points in the asterisk is not specified, accomodating font differences.</notes>
 </owl:Class>
@@ -2226,7 +2226,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Transcription/Translation End Point top is an asterisk in a circle (in order: transcription, translation):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TranscriptionStopSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transcription-end-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/stop-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/stop-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -2263,7 +2263,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Transcription/Translation End Point top is an asterisk in a circle (in order: transcription, translation):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TranslationStopSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">translation-end-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/stop-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/stop-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -2290,7 +2290,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The specific recombination site glyph is a triangle, centered on the backbone, as has appeared in a number of recombinase circuit papers:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SpecificRecombinationSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">specific-recombination-site-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/specific-recombination-site</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/specific-recombination-site</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flippase recognition target (FRT) site</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left deliberately blank*</notes>
@@ -2330,7 +2330,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The operator glyph is an open "cup" suggesting a binding location:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OperatorBindingSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operator-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/operator</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/operator</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gal4 binding site in an activatable promoter.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This glyph puts a "dent" in the backbone line.</notes>
@@ -2395,7 +2395,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 5' overhang site glyph is an image of a strand of DNA extended on the 5' edge of its forward strand, and the complementary 3' Overhang Site glyph is a reflection of the 5' Overhang Site (in order: five-prime, three-prime):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FivePrimeOverhangSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">five-prime-overhang-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/overhang</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/overhang</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -2421,7 +2421,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 5' overhang site glyph is an image of a strand of DNA extended on the 5' edge of its forward strand, and the complementary 3' Overhang Site glyph is a reflection of the 5' Overhang Site (in order: five-prime, three-prime):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ThreePrimeOverhangSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">three-prime-overhang-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/overhang</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/overhang</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
 </owl:Class>
 
@@ -2436,7 +2436,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With a double-stranded backbone (in order: five-prime double stranded, three-prime double stranded):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FivePrimeOverhangSiteGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">five-prime-overhang-specification-doublestrand.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/overhang</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/overhang</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#ThreePrimeOverhangSiteGlyphAlternative">
@@ -2450,7 +2450,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With a double-stranded backbone (in order: five-prime double stranded, three-prime double stranded):</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ThreePrimeOverhangSiteGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">three-prime-overhang-specification-doublestrand.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/overhang</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/overhang</glyphDirectory>
 </owl:Class>
 
 <owl:Class rdf:about="#PromoterSiteGlyph">
@@ -2476,7 +2476,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The promoter glyph is a bent arrow pointing forward, suggesting the action of transcription from its transcription start site:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PromoterSiteGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">promoter-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/promoter</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/promoter</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The lacYZA promoter</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -2505,7 +2505,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assembly scar glyph is an "equal sign" image, the pattern produced by the union of a 5' sticky end and 3' sticky end glyph. The scar will cover the backbone, creating a visual break suggesting the potential disruption associated with a scar:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssemblyScarGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assembly-scar-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/assembly-scar</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/assembly-scar</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
   <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligated sticky ends following BioBrick assembly.</prototypicalExample>
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
@@ -2522,7 +2522,7 @@ Transcription/Translation End Point is a "stem-top" glyph for describing small s
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With a double-stranded backbone:</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssemblyScarGlyphAlternative</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assembly-scar-specification-doublestrand.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0/Glyphs/SequenceFeatures/assembly-scar</glyphDirectory>
+  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/SequenceFeatures/assembly-scar</glyphDirectory>
 </owl:Class>
 
 <owl:AllDisjointClasses>
