@@ -1,0 +1,40 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ feature/sbolvo31 ]
+  pull_request:
+    branches: [ feature/sblvo31 ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 8
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+      - name: Build with Maven
+        run: |
+        mvn package --file sbol-vo-update-doc/pom.xml
+        mvn clean install --file sbol-vo-update-doc/pom.xml
+        mvn clean --file sbol-vo-update-doc/pom.xml
+
+    - name: Download current ontology
+      run: curl http://localhost:8080/lode/extract?url=http://synbiodex.github.io/sbol-visual-ontology/sbol-vo.rdf > sbol-vo.html
+
+
+    - name: Update ontology values
+      run: python markdown-to-owl/Application.py
+
+    - name: update HTML ontology file
+      run: mvn exec:java -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
+
