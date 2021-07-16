@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.7'
       - name: Build with Maven
-        run: mvn clean --file install sbol-vo-update-doc/pom.xml
+        run: mvn clean install sbol-vo-update-doc/pom.xml
 
       - name: Download current ontology
         run: curl http://localhost:8080/lode/extract?url=http://synbiodex.github.io/sbol-visual-ontology/sbol-vo.rdf > sbol-vo.html
