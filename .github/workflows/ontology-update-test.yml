@@ -23,18 +23,14 @@ jobs:
         with:
           python-version: '3.7'
       - name: Build with Maven
-        run: |
-        mvn package --file sbol-vo-update-doc/pom.xml
-        mvn clean install sbol-vo-update-doc/pom.xml
-        mvn clean sbol-vo-update-doc/pom.xml
+        run: mvn clean --file install sbol-vo-update-doc/pom.xml
 
-    - name: Download current ontology
-      run: curl http://localhost:8080/lode/extract?url=http://synbiodex.github.io/sbol-visual-ontology/sbol-vo.rdf > sbol-vo.html
+      - name: Download current ontology
+        run: curl http://localhost:8080/lode/extract?url=http://synbiodex.github.io/sbol-visual-ontology/sbol-vo.rdf > sbol-vo.html
 
+      - name: Update ontology values
+        run: python markdown-to-owl/Application.py
 
-    - name: Update ontology values
-      run: python markdown-to-owl/Application.py
-
-    - name: update HTML ontology file
-      run: mvn exec:java -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
+      - name: update HTML ontology file
+        run: mvn exec:java -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
