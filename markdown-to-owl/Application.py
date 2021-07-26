@@ -8,10 +8,13 @@ from MarkDown import *
 from Ontology import *
 import os
 
-from numpy.distutils.exec_command import filepath_from_subprocess_output
+# from numpy.distutils.exec_command import filepath_from_subprocess_output
 
 # sbolVisualDir= "../../SBOL-visual/Glyphs"
 sbolVisualDir = "../versions/v3.0/Glyphs"
+
+
+# sbolVisualDir = "../Glyphs"
 
 
 def getTermName(identifiers, file):
@@ -34,12 +37,15 @@ def updateTitle(title, fileNameFragments):
     if title.endswith("Glyph"):
         title = title[:-len("Glyph")]
 
+
     fragmentCount = len(fileNameFragments)
     suffix = fileNameFragments[fragmentCount - 3]
-    if suffix == "MolecularSpecies":
-        suffix = "Species"
-    elif suffix == "InteractionNodes":
+    if suffix == "InteractionNodes":
         suffix = "Node"
+    elif suffix == "Interactions":
+        suffix = "Interaction"
+    elif suffix == "MolecularSpecies":
+        suffix = "Species"
     elif suffix == "SequenceFeatures":
         suffix = "SequenceFeature"
     else:
@@ -86,7 +92,7 @@ def inferIdentifiers(directory, identifiers):
                     print("***********The new term for " + title + " has also been added. File:" + filePath)
 
                 else:
-                    # Prioritise the existing record, add the suffix to the current record. 
+                    # Prioritise the existing record, add the suffix to the current record.
                     newTitle = updateTitle(title, fileNameFragments)
                     identifiers[newTitle] = filePath
                     print("******Changed the identifier from " + title + " to " + newTitle + ". File:" + filePath)
