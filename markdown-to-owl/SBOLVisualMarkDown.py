@@ -1,8 +1,8 @@
-'''
+"""
 Created on 5 Apr 2019
 
 @author: gokselmisirli
-'''
+"""
 import re
 import os
 
@@ -200,7 +200,8 @@ class SBOLVisualMarkDown(object):
     def getDirectory(self):
         filePath = self._mdContent.filePath  # ../SBOL-visual/Glyphs/Interactions/inhibition/README.md
         dir = os.path.dirname(filePath)  # ../SBOL-visual/Glyphs/Interactions/inhibition
-        index = dir.index(os.path.sep, len("../"))
+        # print(os.path.sep)
+        index = dir.index("/", len("../versions/")) #TODO: get the data after 3 seperators; update for repository in use
         dir = dir[index + 1:]  # Glyphs/Interactions/inhibition
         # dir="https://github.com/SynBioDex/SBOL-visual/blob/master/" + dir
         return dir
