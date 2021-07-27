@@ -31,8 +31,7 @@ jobs:
 
       - name: Update ontology values
         run: |
-          cd markdown-to-owl
-          python3 Application.py
+          python3 ./markdown-to-owl/Application.py
 
 
       - name: update HTML ontology file
