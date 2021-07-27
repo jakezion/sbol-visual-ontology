@@ -33,8 +33,10 @@ jobs:
       - name: Update ontology values
         run: |
           ls
-          python markdown-to-owl/Application.py
+          cd markdown-to-owl
           ls
+          python Application.py
+
 
       - name: update HTML ontology file
         run: mvn exec:java -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
