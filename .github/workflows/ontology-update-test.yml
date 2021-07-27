@@ -36,13 +36,12 @@ jobs:
           cd markdown-to-owl
           python3 Application.py
 
-
       - name: move to correct directory
         run: |
           cd sbol-vo-update-doc
           ls -a
 
-      -name: update HTML ontology file
+      - name: update HTML ontology file
        run: |
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
           ls -a
