@@ -22,9 +22,12 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
+          architecture: 'x64'
 
       - name: Update ontology values
-        run: python markdown-to-owl/Application.py
+        run: |
+        python markdown-to-owl/Application.py build
+        python markdown-to-owl/Application.py install
 
       - name: Build with Maven
         run: mvn clean install -f sbol-vo-update-doc/pom.xml
