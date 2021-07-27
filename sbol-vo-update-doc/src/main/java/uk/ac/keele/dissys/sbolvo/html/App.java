@@ -114,7 +114,6 @@ public class App {
         //final File f = new File("../sbol-vo.html");
         FileUtils.writeStringToFile(source, doc.outerHtml(), "UTF-8");
         System.out.println("done!");
-        System.out.println("Completion");
     }
 
     private static String getAfter(String data, String separator) {
