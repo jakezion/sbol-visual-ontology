@@ -28,7 +28,6 @@ jobs:
         run: |
           pip3 install owlready2
           pip3 install rdflib
-          mvn clean install -f sbol-vo-update-doc/pom.xml //remove
 
       - name: Update ontology values
         run: |
