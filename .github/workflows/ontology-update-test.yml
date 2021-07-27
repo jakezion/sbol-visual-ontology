@@ -28,7 +28,7 @@ jobs:
         run: |
           pip3 install owlready2
           pip3 install rdflib
-          mvn clean install -f sbol-vo-update-doc/pom.xml
+          mvn clean install -f sbol-vo-update-doc/pom.xml //remove
 
       - name: Update ontology values
         run: |
@@ -40,7 +40,7 @@ jobs:
       - name: update HTML ontology file
 
         run: |
-          cd sbol-vo-update-doc/src/main/java
+          cd ../sbol-vo-update-doc
           ls
           mvn exec:java -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
