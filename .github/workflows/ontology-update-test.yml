@@ -40,7 +40,7 @@ jobs:
       - name: update HTML ontology file
 
         run: |
-          cd sbol-vo-update-doc
+          cd sbol-vo-update-doc/src/main/java
           ls
           mvn exec:java -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
