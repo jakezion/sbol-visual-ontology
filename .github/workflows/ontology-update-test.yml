@@ -24,13 +24,14 @@ jobs:
           python-version: '3.7'
           architecture: 'x64'
 
-      - name: Update ontology values
+      - name: Install dependencies
         run: |
-        python markdown-to-owl/Application.py build
-        python markdown-to-owl/Application.py install
+          pip3 install owlready2
+          pip3 install rdflib
+          mvn clean install -f sbol-vo-update-doc/pom.xml
 
-      - name: Build with Maven
-        run: mvn clean install -f sbol-vo-update-doc/pom.xml
+      - name: Update ontology values
+        run: python markdown-to-owl/Application.py
 
       - name: update HTML ontology file
         run: mvn exec:java -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
