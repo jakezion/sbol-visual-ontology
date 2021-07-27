@@ -28,7 +28,8 @@ jobs:
         run: |
           pip3 install owlready2
           pip3 install rdflib
-          mvn install sbol-vo-update-doc/pom.xml
+          cd sbol-vo-update-doc
+          mvn install
 
       - name: Update ontology values
         run: |
