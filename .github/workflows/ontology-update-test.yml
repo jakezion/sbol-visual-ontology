@@ -42,7 +42,7 @@ jobs:
           ls -a
 
       - name: update HTML ontology file
-       run: |
+        run: |
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
           ls -a
 
