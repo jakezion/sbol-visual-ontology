@@ -201,7 +201,8 @@ class SBOLVisualMarkDown(object):
         filePath = self._mdContent.filePath  # ../SBOL-visual/Glyphs/Interactions/inhibition/README.md
         dir = os.path.dirname(filePath)  # ../SBOL-visual/Glyphs/Interactions/inhibition
         # print(os.path.sep)
-        index = dir.index("/", len("../versions/")) #TODO: get the data after 3 seperators; update for repository in use
+        # index = dir.index("/", len("../versions/")) #TODO: get the data after 3 seperators; update for repository in use
+        index = dir.index("/", len("../")) #TODO: get the data after 3 seperators; update for repository in use
         dir = dir[index + 1:]  # Glyphs/Interactions/inhibition
         # dir="https://github.com/SynBioDex/SBOL-visual/blob/master/" + dir
         return dir
