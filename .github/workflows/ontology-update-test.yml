@@ -35,17 +35,6 @@ jobs:
           cd sbol-vo-update-doc
           mvn install
 
-
-      - name: Update ontology values test
-        uses: test-room-7/action-update-file@v1
-        with:
-          file-path: |
-              ./sbol-vo.rdf
-              ./sbol-vo.txt
-          commit-msg: Update ontology values
-          branch: feature/sbolvo31
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Generate new ontology values
         run: |
           cd markdown-to-owl
