@@ -113,11 +113,11 @@ public class App {
 
         //final File f = new File("../sbol-vo.html");
         System.out.println("writing file");
-        System.out.print(source);
+        System.out.println(source.toString());
 
         FileUtils.writeStringToFile(source, doc.outerHtml(), "UTF-8");
         System.out.println("done!");
-        System.out.print(source);
+        System.out.println(source.toString());
     }
 
     private static String getAfter(String data, String separator) {
