@@ -12,7 +12,7 @@ import os
 
 # sbolVisualDir= "../../SBOL-visual/Glyphs"
 # sbolVisualDir = "../versions/v3.0/Glyphs"
-sbolVisualDir = "../versions/v2.3/Glyphs"
+sbolVisualDir = "../versions/v2.3/SBOL-visual/Glyphs"
 
 # sbolVisualDir = "../Glyphs"
 
