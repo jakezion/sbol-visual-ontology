@@ -31,7 +31,7 @@ public class App {
      *  5 - Run this App.java to create the updated sbol-vo.htm with images
      * */
     public static void main(String[] args) throws IOException {
-        System.out.print("...");
+        System.out.println("...");
         File source = new File("../sbol-vo.html");
         // File dest = new File("../sbol-vo-org.html");
         //Files.copy(source.toPath(), dest.toPath(),StandardCopyOption.REPLACE_EXISTING);
@@ -70,8 +70,10 @@ public class App {
             }
         }
 
-
+        System.out.println("getting rdf model");
         Model ontModel = getRdfModel();
+        System.out.println(ontModel);
+        System.out.println("got");
         Property glyph = ontModel.createProperty(sbolbase + "defaultGlyph");
         Property glyphDir = ontModel.createProperty(sbolbase + "glyphDirectory");
 
@@ -112,6 +114,8 @@ public class App {
         cleanHeaders(doc);
 
         //final File f = new File("../sbol-vo.html");
+        System.out.println("writing file");
+
         FileUtils.writeStringToFile(source, doc.outerHtml(), "UTF-8");
         System.out.println("done!");
     }
