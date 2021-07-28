@@ -10,8 +10,8 @@ import os
 
 # from numpy.distutils.exec_command import filepath_from_subprocess_output
 
-sbolVisualDir= "../../SBOL-visual/Glyphs"
-# sbolVisualDir = "../versions/v3.0/Glyphs"
+# sbolVisualDir= "../../SBOL-visual/Glyphs"
+sbolVisualDir = "../versions/v3.0/Glyphs"
 
 
 # sbolVisualDir = "../Glyphs"
