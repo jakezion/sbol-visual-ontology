@@ -72,8 +72,6 @@ public class App {
 
         System.out.println("getting rdf model");
         Model ontModel = getRdfModel();
-        System.out.println(ontModel);
-        System.out.println("got");
         Property glyph = ontModel.createProperty(sbolbase + "defaultGlyph");
         Property glyphDir = ontModel.createProperty(sbolbase + "glyphDirectory");
 
@@ -115,9 +113,11 @@ public class App {
 
         //final File f = new File("../sbol-vo.html");
         System.out.println("writing file");
+        System.out.print(source);
 
         FileUtils.writeStringToFile(source, doc.outerHtml(), "UTF-8");
         System.out.println("done!");
+        System.out.print(source);
     }
 
     private static String getAfter(String data, String separator) {
