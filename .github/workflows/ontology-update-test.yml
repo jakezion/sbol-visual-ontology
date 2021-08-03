@@ -1,0 +1,53 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ feature/sbolvo31 ]
+  pull_request:
+    branches: [ feature/sblvo31 ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK 8
+        uses: actions/setup-java@v1
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+
+      - name: Install python dependencies
+        run: |
+          pip3 install owlready2
+          pip3 install rdflib
+
+      - name: Install maven dependencies
+        run: |
+          cd sbol-vo-update-doc
+          mvn install
+
+      - name: Generate new ontology values
+        run: |
+          cd markdown-to-owl
+          python3 Application.py
+
+      - name: Generate new HTML ontology file
+        run: |
+          cd sbol-vo-update-doc
+          mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
+
+      - name: HTML Preview
+        id: html_preview
+        uses: pavi2410/html-preview-action@v2
+        with:
+          html_file: '../sbol-vo.html'
+
