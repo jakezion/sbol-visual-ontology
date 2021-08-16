@@ -36,5 +36,5 @@ jobs:
 
       - name: Generate new ontology values
         shell: bash
-        run: main.bat
+        run: ./main.sh
 
