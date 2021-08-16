@@ -74,6 +74,7 @@ jobs:
           mkdir -p versions/${{ env.RELEASE_VERSION }}
           cp ./sbol-vo.html ./versions/${{ env.RELEASE_VERSION }}
           cp ./sbol-vo.rdf ./versions/${{ env.RELEASE_VERSION }}
+          cd versions
           ls
 
       - name: Commit & Push changes
