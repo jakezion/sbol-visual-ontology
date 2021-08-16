@@ -71,7 +71,7 @@ jobs:
 
       - name: create and populate version folder
         run: |
-          cd ../versions
+          cd versions
           sudo su mkdir ${{ env.RELEASE_VERSION }}
           sudo cp ./sbol-vo.html ./versions/${{ env.RELEASE_VERSION }}
           sudo cp ./sbol-vo.rdf ./versions/${{ env.RELEASE_VERSION }}
