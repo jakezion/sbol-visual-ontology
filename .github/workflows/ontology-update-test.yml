@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Ontology update testing
 
 on:
   push:
@@ -7,14 +7,13 @@ on:
     branches: [ feature/sblvo31 ]
 
 jobs:
-  build:
-
+  build_dependencies:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Set up JDK 8
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v2
         with:
           java-version: '8'
           distribution: 'adopt'
@@ -36,18 +35,19 @@ jobs:
           mvn install
 
       - name: Generate new ontology values
+        shell: bash
         run: |
           cd markdown-to-owl
-          python3 Application.py
+          pip3 install owlready2
+          pip3 install rdflib
+          python Application.py
 
-      - name: Generate new HTML ontology file
-        run: |
-          cd sbol-vo-update-doc
+          cd ../lode-document-extractor
+          mvn clean install
+          mvn exec:java -Dexec.mainClass="lodedocumentextractor"
+
+          cd ../sbol-vo-update-doc
+          mvn clean install
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
-      - name: HTML Preview
-        id: html_preview
-        uses: pavi2410/html-preview-action@v2
-        with:
-          html_file: '../sbol-vo.html'
 
