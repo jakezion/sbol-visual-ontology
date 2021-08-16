@@ -49,7 +49,8 @@ jobs:
           cd ../sbol-vo-update-doc
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
-          echo sbol-vo.html
+      - name: view updated sbol-vo
+        run: echo sbol-vo.html
 
 
 
