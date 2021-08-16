@@ -72,10 +72,10 @@ jobs:
       - name: create and populate version folder
         run: |
           cd versions
-          sudo su mkdir ${{ env.RELEASE_VERSION }}
-          sudo cp ./sbol-vo.html ./versions/${{ env.RELEASE_VERSION }}
-          sudo cp ./sbol-vo.rdf ./versions/${{ env.RELEASE_VERSION }}
-          sudo cp https://SynBioDex.github.io/SBOL-visual/${{ env.RELEASE_VERSION }}/Glyphs ./versions/${{ env.RELEASE_VERSION }}
+          mkdir ${{ env.RELEASE_VERSION }}
+          cp ./sbol-vo.html ./versions/${{ env.RELEASE_VERSION }}
+          cp ./sbol-vo.rdf ./versions/${{ env.RELEASE_VERSION }}
+          cp https://SynBioDex.github.io/SBOL-visual/${{ env.RELEASE_VERSION }}/Glyphs ./versions/${{ env.RELEASE_VERSION }}
           ls
 
       - name: Commit & Push changes
