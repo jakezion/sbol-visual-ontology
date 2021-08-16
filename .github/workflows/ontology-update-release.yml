@@ -1,10 +1,8 @@
 name: Ontology update testing
 
 on:
-  push:
-    branches: [ feature/sbolvo31 ]
-  pull_request:
-    branches: [ feature/sblvo31 ]
+  release:
+    types: [ published ]
 
 jobs:
   build_dependencies:
@@ -50,5 +48,9 @@ jobs:
 
           cd ../sbol-vo-update-doc
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
+
+          echo sbol-vo.html
+
+
 
 
