@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
       - name: Get latest release of NodeJS
-        uses: rez0n/actions-github-release@master
+        uses: rez0n/actions-github-release@main
         id: sbolvisual_release
         env:
           token: ${{ secrets.GITHUB_TOKEN }}
