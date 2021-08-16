@@ -17,6 +17,8 @@
 // import com.github.dissys.*;
 
 import it.essepuntato.lode.MimeType;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
@@ -38,15 +40,19 @@ public class lodedocumentextractor {
 
         System.out.println("...");
 
-        File rdf = new File("sbol-vo.rdf");
-        File html = new File("sbol-vo.html");
+        File rdf = new File("../sbol-vo.rdf");
+        File html = new File("../sbol-vo.html");
         // Document doc = Jsoup.parse(ontology, "UTF-8");
 
         // generateLodeHTMLDocument(rdf, html);
         //File file = new File("./extraction.xsl");
 
-        String xsltURL = "./lode-document_files/extraction.xsl";
-        String cssLocation = "./lode-document_files/lode_files" + File.separator;
+        String xsltURL = "../lode-document_files/extraction.xsl";
+        //File xsltURL = new File("lode-document_files/extraction.xsl");
+        String cssLocation = "../lode-document_files/lode_files" + File.separator;
+        // File cssLocation = new File("lode-document_files/lode_files");
+
+
 //        String xsltURL = "resources/extraction.xsl";
 //        String cssLocation = "resources/lode_files" + File.separator;
 
@@ -66,10 +72,11 @@ public class lodedocumentextractor {
         Transformer transformer = tfactory.newTransformer(new StreamSource(xsltURL));
 
         transformer.setParameter("css-location", cssLocation);
+        //transformer.setParameter("css-location", cssLocation + File.separator);
         transformer.setParameter("lang", "en");
         transformer.setParameter("ontology-url", rdf);
-        transformer.setParameter("source", String.format("%source", cssLocation));
-
+        //transformer.setParameter("source", String.format("%s%ssource", cssLocation,File.separator));
+        transformer.setParameter("source", String.format("%ssource", cssLocation));
         StreamSource inputSource = new StreamSource(new StringReader(content));
 
         transformer.transform(inputSource, new StreamResult(output));
