@@ -70,7 +70,7 @@ jobs:
           sudo apt-get install html2text
           html2text sbol-vo.html | less
 
-      - if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' }}
       - name: create and populate version folder
         run: |
           mkdir -p versions/${{ env.RELEASE_VERSION }}
@@ -79,7 +79,7 @@ jobs:
           cd versions
           ls
 
-      - if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' }}
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
