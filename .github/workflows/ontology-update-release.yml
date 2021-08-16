@@ -26,28 +26,29 @@ jobs:
 
       - name: Install python dependencies
         run: |
+          cd markdown-to-owl
           pip3 install owlready2
           pip3 install rdflib
 
       - name: Install maven dependencies
         run: |
-          cd sbol-vo-update-doc
-          mvn install
+          cd ../lode-document-extractor
+          mvn clean install
+
+      - name: Install maven dependencies
+        run: |
+          cd ../sbol-vo-update-doc
+          mvn clean install
 
       - name: Generate new ontology values
-        shell: bash
         run: |
-          cd markdown-to-owl
-          pip3 install owlready2
-          pip3 install rdflib
+          cd ../markdown-to-owl
           python Application.py
 
           cd ../lode-document-extractor
-          mvn clean install
           mvn exec:java -Dexec.mainClass="lodedocumentextractor"
 
           cd ../sbol-vo-update-doc
-          mvn clean install
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
 
