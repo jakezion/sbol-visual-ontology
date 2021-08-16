@@ -1,6 +1,10 @@
 name: Ontology update testing
 
 on:
+  push:
+    branches: [ feature/sbolvo31 ]
+  pull_request:
+    branches: [ feature/sblvo31 ]
   release:
     types: [ published ]
 
