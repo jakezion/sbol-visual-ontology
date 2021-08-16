@@ -48,10 +48,3 @@ jobs:
 
           cd ../sbol-vo-update-doc
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
-
-          cd ..
-          sudo apt-get install html2text
-          html2text sbol-vo.html | less
-
-
-
