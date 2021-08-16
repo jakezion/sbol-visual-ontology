@@ -38,3 +38,7 @@ jobs:
         shell: bash
         run: git update-index --chmod=+x ./main.sh
 
+      - name: Generate new ontology values 2
+        shell: bash
+        run: ./main.sh
+
