@@ -43,11 +43,15 @@ jobs:
           python Application.py
 
           cd ../lode-document-extractor
+          mvn package
           mvn clean install
+          mvn clean
           mvn exec:java -Dexec.mainClass="lodedocumentextractor"
 
           cd ../sbol-vo-update-doc
+          mvn package
           mvn clean install
+          mvn clean
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
 
