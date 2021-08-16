@@ -32,17 +32,17 @@ jobs:
 
       - name: Install maven dependencies
         run: |
-          cd ../lode-document-extractor
+          cd lode-document-extractor
           mvn clean install
 
       - name: Install maven dependencies
         run: |
-          cd ../sbol-vo-update-doc
+          cd sbol-vo-update-doc
           mvn clean install
 
       - name: Generate new ontology values
         run: |
-          cd ../markdown-to-owl
+          cd markdown-to-owl
           python Application.py
 
           cd ../lode-document-extractor
