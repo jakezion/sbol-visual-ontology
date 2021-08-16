@@ -34,11 +34,6 @@ jobs:
           cd sbol-vo-update-doc
           mvn install
 
-  generate:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Generate new ontology values
         run: |
           ".\main.bat"
