@@ -35,6 +35,7 @@ jobs:
           mvn install
 
       - name: Generate new ontology values
+        shell: cmd
         run: |
-          ".\main.bat"
+          .\main.bat
 
