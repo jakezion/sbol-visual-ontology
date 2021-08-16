@@ -78,8 +78,6 @@ jobs:
           sudo cp https://SynBioDex.github.io/SBOL-visual/${{ env.RELEASE_VERSION }}/Glyphs ./versions/${{ env.RELEASE_VERSION }}
           ls
 
-
-
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
