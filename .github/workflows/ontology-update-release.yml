@@ -50,6 +50,7 @@ jobs:
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
       - name: view updated sbol-vo
+        shell: bash
         run: echo `<sbol-vo.html`
 
 
