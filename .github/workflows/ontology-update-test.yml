@@ -1,20 +1,21 @@
-name: Java CI with Maven
+name: Ontology update testing
 
 on:
   push:
     branches: [ feature/sbolvo31 ]
   pull_request:
     branches: [ feature/sblvo31 ]
+  release:
+    types: [ published ]
 
 jobs:
-  build:
-
+  build_dependencies:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Set up JDK 8
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v2
         with:
           java-version: '8'
           distribution: 'adopt'
@@ -35,19 +36,37 @@ jobs:
           cd sbol-vo-update-doc
           mvn install
 
+  generate:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - if: github.event_name == 'release'
       - name: Generate new ontology values
         run: |
           cd markdown-to-owl
           python3 Application.py
 
-      - name: Generate new HTML ontology file
+      - name: Generate LODE document extractor
+        run: |
+          cd lode-document-extractor
+          mvn exec:java -e -Dexec.mainClass="lodedocumentextractor"
+
+      - name: Update generated HTML ontology file
         run: |
           cd sbol-vo-update-doc
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
-      - name: HTML Preview
-        id: html_preview
-        uses: pavi2410/html-preview-action@v2
+      - name: create and populate version folder
+        run: |
+          cd ../versions
+          sudo su mkdir ${{ github.event_name == 'release' }}
+          sudo cp ../sbol-vo.html ../versions/${{ gi  thub.event_name == 'release' }}
+          sudo cp ../sbol-vo.rdf ../versions/${{ github.event_name == 'release' }}
+          sudo cp https://SynBioDex.github.io/SBOL-visual/${{ github.event_name == 'release' }}/Glyphs ../versions/${{ github.event_name == 'release' }}
+
+      - if: ${{ github.event_name == 'push' }}
+        uses: ad-m/github-push-action@master
         with:
-          html_file: '../sbol-vo.html'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
