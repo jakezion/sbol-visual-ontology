@@ -51,6 +51,5 @@ jobs:
 
       - name: View html
         run: |
-          cd ..
           sudo apt-get install html2text
           html2text sbol-vo.html | less
