@@ -19,6 +19,11 @@ jobs:
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Test
+        run: |
+          echo ${{ env.RELEASE_VERSION }}
 
       - name: Get latest release of SBOL Visual
         uses: rez0n/actions-github-release@main
@@ -89,6 +94,6 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: master
+          branch: ${{ env.RELEASE_VERSION }}
           push_options: '--force'
           commit_message: Created new versions folder and updated default html and rdf file
