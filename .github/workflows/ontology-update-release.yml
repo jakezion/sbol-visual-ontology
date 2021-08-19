@@ -100,7 +100,7 @@ jobs:
           mkdir -p versions/${{ env.RELEASE_VERSION }}
           cp ./sbol-vo.html ./versions/${{ env.RELEASE_VERSION }}
           cp ./sbol-vo.rdf ./versions/${{ env.RELEASE_VERSION }}
-          cp https://SynBioDex.github.io/SBOL-visual/${{ env.RELEASE_VERSION }}/Glyphs ./versions/${{ env.RELEASE_VERSION }}/Glyphs
+          cp https://github.com/SynBioDex/SBOL-visual/${{ env.RELEASE_VERSION }}/Glyphs ./versions/${{ env.RELEASE_VERSION }}/Glyphs
 
         if: ${{ github.event_name == 'published' }}
       - uses: stefanzweifel/git-auto-commit-action@v4
