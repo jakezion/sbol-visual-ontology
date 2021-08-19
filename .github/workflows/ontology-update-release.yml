@@ -102,12 +102,12 @@ jobs:
           cp ./sbol-vo.rdf ./versions/${{ env.RELEASE_VERSION }}
           cp https://SynBioDex.github.io/SBOL-visual/${{ env.RELEASE_VERSION }}/Glyphs ./versions/${{ env.RELEASE_VERSION }}/Glyphs
 
-      if: ${{ github.event_name == 'published' }}
-     - uses: stefanzweifel/git-auto-commit-action@v4
-       with:
-         branch: master
-         tagging_message: ${{ steps.sbol-visual-release.outputs.release }}
-         commit_message: Created new versions folder and updated default html and rdf file
+        if: ${{ github.event_name == 'published' }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: master
+          tagging_message: ${{ steps.sbol-visual-release.outputs.release }}
+          commit_message: Created new versions folder and updated default html and rdf file
 
 
 
