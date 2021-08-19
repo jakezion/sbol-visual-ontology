@@ -7,6 +7,8 @@ on:
     branches: [ feature/sblvo31 ]
   release:
     types: [ published ]
+    tags:
+      - 'v*.*'
 
 jobs:
   build_dependencies:
@@ -24,6 +26,18 @@ jobs:
         run: |
           echo $RELEASE_VERSION
           echo ${{ env.RELEASE_VERSION }}
+
+
+      - name: Get latest release of SBOL Visual
+        uses: rez0n/actions-github-release@main
+        id: sbol-visual-release
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: "SynBioDex/SBOL-visual"
+          type: "stable"
+
+      - name: Test2
+        run: echo ${{ steps.sbol-visual-release.outputs.release }}
 
       - name: Set up JDK 8
         uses: actions/setup-java@v2
@@ -43,15 +57,32 @@ jobs:
           pip3 install owlready2
           pip3 install rdflib
 
+
       - name: Install maven dependencies
         run: |
           cd lode-document-extractor
           mvn clean install
 
+      - name: Cache lode-document-extractor Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('lode-document-extractor/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
       - name: Install maven dependencies
         run: |
           cd sbol-vo-update-doc
           mvn clean install
+
+      - name: Cache sbol-vo-update-doc Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('sbol-vo-update-doc/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
 
       - name: Generate new ontology values
         run: |
@@ -64,23 +95,20 @@ jobs:
           cd ../sbol-vo-update-doc
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
-
-      - name: View html
-        run: |
-          sudo apt-get install html2text
-          html2text sbol-vo.html | less
-
-        if: ${{ github.event_name == 'push' }}
       - name: create and populate version folder
         run: |
           mkdir -p versions/${{ env.RELEASE_VERSION }}
           cp ./sbol-vo.html ./versions/${{ env.RELEASE_VERSION }}
           cp ./sbol-vo.rdf ./versions/${{ env.RELEASE_VERSION }}
-          cd versions
-          ls
+          cp https://SynBioDex.github.io/SBOL-visual/${{ env.RELEASE_VERSION }}/Glyphs ./versions/${{ env.RELEASE_VERSION }}/Glyphs
 
-        if: ${{ github.event_name == 'push' }}
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      if: ${{ github.event_name == 'published' }}
+     - uses: stefanzweifel/git-auto-commit-action@v4
+       with:
+         branch: master
+         tagging_message: ${{ steps.sbol-visual-release.outputs.release }}
+         commit_message: Created new versions folder and updated default html and rdf file
+
+
+
+
