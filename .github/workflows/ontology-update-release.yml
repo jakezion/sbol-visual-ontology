@@ -49,32 +49,15 @@ jobs:
           pip3 install owlready2
           pip3 install rdflib
 
-
       - name: Install maven dependencies
         run: |
           cd lode-document-extractor
           mvn clean install
 
-      - name: Cache lode-document-extractor Maven repository
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('lode-document-extractor/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
       - name: Install maven dependencies
         run: |
           cd sbol-vo-update-doc
           mvn clean install
-
-      - name: Cache sbol-vo-update-doc Maven repository
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('sbol-vo-update-doc/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
 
       - name: Generate new ontology values
         run: |

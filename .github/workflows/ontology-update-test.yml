@@ -94,3 +94,21 @@ ${{ steps.sbol-visual-release.outputs.release }} #this is the correct version na
   uses: actions-js/push@master
   with:
     github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache sbol-vo-update-doc Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('sbol-vo-update-doc/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+
+            - name: Cache lode-document-extractor Maven repository
+              uses: actions/cache@v2
+              with:
+                path: ~/.m2/repository
+                key: ${{ runner.os }}-maven-${{ hashFiles('lode-document-extractor/pom.xml') }}
+                restore-keys: |
+                  ${{ runner.os }}-maven-
+
