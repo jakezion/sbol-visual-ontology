@@ -94,6 +94,5 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: ${{ env.RELEASE_VERSION }}
-          push_options: '--force'
           commit_message: Created new versions folder and updated default html and rdf file
+          push_options: '--force'
