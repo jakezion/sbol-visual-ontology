@@ -72,7 +72,7 @@ jobs:
 
       - name: create and populate version folder 1
         run: |
-          [[ -d versions/v${{ steps.sbol-visual-release.outputs.release }} ]] || mkdir versions/v${{ steps.sbol-visual-release.outputs.release }}
+          mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
 
       - name: create and populate version folder 2
         run: |
