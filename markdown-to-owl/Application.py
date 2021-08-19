@@ -12,7 +12,7 @@ import os
 
 # sbolVisualDir= "../../SBOL-visual/Glyphs"
 sbolVisualDir = "../versions/v3.0/Glyphs"  # TODO: check for updating to external resource for glyphs
-# sbolVisualDir = "https://github.com/SynBioDex/SBOL-visual/tree/master/Glyphs"
+#sbolVisualDir = "https://synbiodex.github.io/SBOL-visual/Glyphs"
 
 
 # sbolVisualDir = "../Glyphs"
