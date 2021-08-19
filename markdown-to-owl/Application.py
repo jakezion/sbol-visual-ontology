@@ -11,8 +11,8 @@ import os
 # from numpy.distutils.exec_command import filepath_from_subprocess_output
 
 # sbolVisualDir= "../../SBOL-visual/Glyphs"
-# sbolVisualDir = "../versions/v3.0/Glyphs"  # TODO: check for updating to external resource for glyphs
-sbolVisualDir = "https://github.com/SynBioDex/SBOL-visual/tree/master/Glyphs"
+sbolVisualDir = "../versions/v3.0/Glyphs"  # TODO: check for updating to external resource for glyphs
+# sbolVisualDir = "https://github.com/SynBioDex/SBOL-visual/tree/master/Glyphs"
 
 
 # sbolVisualDir = "../Glyphs"
