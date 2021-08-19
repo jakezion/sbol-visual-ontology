@@ -31,6 +31,9 @@ jobs:
       - name: Test2
         run: echo ${{ steps.sbol-visual-release.outputs.release }}
 
+       - name: Install subversion
+         run: sudo apt install subversion
+
       - name: Set up JDK 8
         uses: actions/setup-java@v2
         with:
@@ -76,7 +79,7 @@ jobs:
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.html ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-          cp -u -a https://github.com/SynBioDex/SBOL-visual/tree/${{ steps.sbol-visual-release.outputs.release }}/Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}/Glyphs
+          svn export https:///github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
