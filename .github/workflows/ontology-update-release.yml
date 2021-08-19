@@ -20,14 +20,6 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
-      - name: Set env
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - name: Test
-        run: |
-          echo $RELEASE_VERSION
-          echo ${{ env.RELEASE_VERSION }}
-
-
       - name: Get latest release of SBOL Visual
         uses: rez0n/actions-github-release@main
         id: sbol-visual-release
@@ -97,10 +89,10 @@ jobs:
 
       - name: create and populate version folder
         run: |
-          mkdir -p versions/v${{ env.RELEASE_VERSION }}
-          cp ./sbol-vo.html ./versions/v${{ env.RELEASE_VERSION }}
-          cp ./sbol-vo.rdf ./versions/v${{ env.RELEASE_VERSION }}
-          cp https://github.com/SynBioDex/SBOL-visual/v${{ env.RELEASE_VERSION }}/Glyphs ./versions/v${{ env.RELEASE_VERSION }}/Glyphs
+          mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
+          cp ./sbol-vo.html ./versions/v${{ steps.sbol-visual-release.outputs.release }}
+          cp ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
+          cp https://github.com/SynBioDex/SBOL-visual/v${{ steps.sbol-visual-release.outputs.release }}/Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
         if: ${{ github.event_name == 'published' }}
       - uses: stefanzweifel/git-auto-commit-action@v4
