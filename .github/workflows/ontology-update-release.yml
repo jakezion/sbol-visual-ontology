@@ -84,7 +84,8 @@ jobs:
 
       - name: create and populate version folder 4
         run: |
-          svn export https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs > ./versions/v${{ steps.sbol-visual-release.outputs.release }}/
+          cd versions/v${{ steps.sbol-visual-release.outputs.release }}
+          svn export https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
