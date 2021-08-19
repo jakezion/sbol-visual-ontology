@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           token: ${{ secrets.EXAMPLE_BOT_TOKEN }}
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
@@ -93,7 +93,7 @@ jobs:
           cd versions/v${{ steps.sbol-visual-release.outputs.release }}
           svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4.8.0
         with:
           branch: ${{ env.RELEASE_VERSION }}
           commit_message: Created new versions folder and updated default html and rdf file
