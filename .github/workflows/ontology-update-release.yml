@@ -97,10 +97,10 @@ jobs:
 
       - name: create and populate version folder
         run: |
-          mkdir -p versions/${{ env.RELEASE_VERSION }}
-          cp ./sbol-vo.html ./versions/${{ env.RELEASE_VERSION }}
-          cp ./sbol-vo.rdf ./versions/${{ env.RELEASE_VERSION }}
-          cp https://github.com/SynBioDex/SBOL-visual/${{ env.RELEASE_VERSION }}/Glyphs ./versions/${{ env.RELEASE_VERSION }}/Glyphs
+          mkdir -p versions/v${{ env.RELEASE_VERSION }}
+          cp ./sbol-vo.html ./versions/v${{ env.RELEASE_VERSION }}
+          cp ./sbol-vo.rdf ./versions/v${{ env.RELEASE_VERSION }}
+          cp https://github.com/SynBioDex/SBOL-visual/v${{ env.RELEASE_VERSION }}/Glyphs ./versions/v${{ env.RELEASE_VERSION }}/Glyphs
 
         if: ${{ github.event_name == 'published' }}
       - uses: stefanzweifel/git-auto-commit-action@v4
