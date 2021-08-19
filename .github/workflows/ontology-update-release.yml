@@ -75,7 +75,6 @@ jobs:
 
       - name: create and populate version folder
         run: |
-          echo "populating versions folder"
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.html ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
