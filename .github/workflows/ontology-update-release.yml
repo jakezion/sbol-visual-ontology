@@ -74,22 +74,13 @@ jobs:
           cd ../sbol-vo-update-doc
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
-      - name: create and populate version folder 1
+      - name: create and populate version folder
         run: |
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
-
-      - name: create and populate version folder 2
-        run: |
           cp -u ./sbol-vo.html ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-
-      - name: create and populate version folder 3
-        run: |
           cp -u ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-
-      - name: create and populate version folder 4
-        run: |
-          cd versions/v${{ steps.sbol-visual-release.outputs.release }}
           svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
+          cp -u ./Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
