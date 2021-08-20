@@ -80,7 +80,8 @@ jobs:
           cp -u ./sbol-vo.html ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
-          cp -u ./Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}
+          cd versions/v${{ steps.sbol-visual-release.outputs.release }}
+          svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
