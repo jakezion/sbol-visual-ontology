@@ -1,18 +1,18 @@
 # https://buildmedia.readthedocs.org/media/pdf/owlready2/latest/owlready2.pdf
 from owlready2 import *
-from Ontology import *
+# from Ontology import *
 import types
 import re
 from RDFTypeChecker import RDFTypeChecker
 from SBOLVisualMarkDown import SBOLVisualMarkDown
 
 onto = get_ontology("http://sbols.org/visual/v3")
-sbol = get_ontology("https://dissys.github.io/sbol-owl/sbol.rdf")
+# sbol = get_ontology("https://dissys.github.io/sbol-owl/sbol.rdf")
+sbol = get_ontology("https://raw.githubusercontent.com/SynBioDex/sbol-owl3/main/sbolowl3.rdf")
 sbol3 = get_ontology("http://sbols.org/v3")
 so = get_ontology("http://identifiers.org/so/")
 biopax = get_ontology("http://www.biopax.org/release/biopax-level3.owl")
 sbo = get_ontology("http://identifiers.org/sbo/")
-
 img = get_ontology("https://github.com/SynBioDex/SBOL-visual/blob/master/Glyphs/")
 
 onto.imported_ontologies.append(sbol)
@@ -522,6 +522,7 @@ def addOntologyTerms(mdContent, termName):
 
 
 def saveOntology():
+    #  onto.save(file="../versions/v3.0/sbol-vo.rdf", format="rdfxml")
     onto.save(file="../sbol-vo.txt", format="rdfxml")
     onto.save(file="../sbol-vo.rdf", format="rdfxml")
 
