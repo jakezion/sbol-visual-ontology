@@ -1,0 +1,114 @@
+name: Ontology update testing
+
+on:
+  push:
+    branches: [ feature/sbolvo31 ]
+  pull_request:
+    branches: [ feature/sblvo31 ]
+  release:
+    types: [ published ]
+
+jobs:
+  build_dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 8
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+
+      - name: Install python dependencies
+        run: |
+          pip3 install owlready2
+          pip3 install rdflib
+
+      - name: Install maven dependencies
+        run: |
+          cd sbol-vo-update-doc
+          mvn install
+
+  generate:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - if: github.event_name == 'release'
+      - name: Generate new ontology values
+        run: |
+          cd markdown-to-owl
+          python3 Application.py
+
+      - name: Generate LODE document extractor
+        run: |
+          cd lode-document-extractor
+          mvn exec:java -e -Dexec.mainClass="lodedocumentextractor"
+
+      - name: Update generated HTML ontology file
+        run: |
+          cd sbol-vo-update-doc
+          mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
+
+      - name: create and populate version folder
+        run: |
+          cd ../versions
+          sudo su mkdir ${{ github.event_name == 'release' }}
+          sudo cp ../sbol-vo.html ../versions/${{ gi  thub.event_name == 'release' }}
+          sudo cp ../sbol-vo.rdf ../versions/${{ github.event_name == 'release' }}
+          sudo cp https://SynBioDex.github.io/SBOL-visual/${{ github.event_name == 'release' }}/Glyphs ../versions/${{ github.event_name == 'release' }}
+
+      - if: ${{ github.event_name == 'push' }}
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Get latest release of SBOL Visual
+        uses: rez0n/actions-github-release@main
+        id: sbol-visual-release
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: "SynBioDex/SBOL-visual"
+          type: "stable"
+
+${{ steps.sbol-visual-release.outputs.release }} #this is the correct version nametag
+
+        if: ${{ github.event_name == 'published' }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: master
+          tagging_message: ${{ steps.sbol-visual-release.outputs.release }}
+          commit_message: Apply php-cs-fixer changes
+
+
+        if: ${{ github.event_name == 'published' }}
+- name: Commit & Push changes
+  uses: actions-js/push@master
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache sbol-vo-update-doc Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('sbol-vo-update-doc/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+
+            - name: Cache lode-document-extractor Maven repository
+              uses: actions/cache@v2
+              with:
+                path: ~/.m2/repository
+                key: ${{ runner.os }}-maven-${{ hashFiles('lode-document-extractor/pom.xml') }}
+                restore-keys: |
+                  ${{ runner.os }}-maven-
+
