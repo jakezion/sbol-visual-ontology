@@ -1,4 +1,4 @@
-name: Ontology update testing
+name: Latest Ontology update
 
 on:
   push:
