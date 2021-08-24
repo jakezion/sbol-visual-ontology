@@ -2,8 +2,6 @@ name: Ontology update testing
 
 on:
   push:
-  pull_request:
-  pull_request_target:
   release:
     types: [ published ]
     tags:
