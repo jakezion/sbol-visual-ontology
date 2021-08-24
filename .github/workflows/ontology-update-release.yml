@@ -44,7 +44,7 @@ jobs:
       # maven dependencies for LODE installed
       - name: Install LODE dependencies
         run: |
-          - cd LODE
+          cd LODE
           mvn clean install
 
       # maven dependencies for lode-document-extractor installed
