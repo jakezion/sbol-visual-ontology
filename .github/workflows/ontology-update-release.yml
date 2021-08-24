@@ -2,10 +2,6 @@ name: Ontology update testing
 
 on:
   push:
-  release:
-    types: [ published ]
-    tags:
-      - 'v*.*'
 
 jobs:
   build_dependencies:
@@ -57,6 +53,11 @@ jobs:
           cd sbol-vo-update-doc
           mvn clean install
 
+      # create glyph folder for use within python scripts
+      - name: create default Glyph folder
+        run: |
+          svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
+
       # scripts are called in succession: 1. rdf file is updated 2. HTML file is created with default values 3. updated rdf file is used to update HTML file
       - name: Generate new ontology values
         run: |
@@ -75,7 +76,6 @@ jobs:
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.html ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-          svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
           cd versions/v${{ steps.sbol-visual-release.outputs.release }}
           svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
