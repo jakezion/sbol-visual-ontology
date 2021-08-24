@@ -6,10 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="lode-document-extractor" />
         <module name="sbol-vo-update-doc" />
+        <module name="LODE" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="LODE" target="1.7" />
+      <module name="lode-document-extractor" target="1.8" />
       <module name="sbol-vo-update-doc" target="1.8" />
     </bytecodeTargetLevel>
   </component>

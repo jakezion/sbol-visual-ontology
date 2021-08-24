@@ -4,6 +4,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/sbol-vo-update-doc/pom.xml" />
+        <option value="$PROJECT_DIR$/lode-document-extractor/pom.xml" />
+        <option value="$PROJECT_DIR$/LODE/pom.xml" />
       </list>
     </option>
   </component>
