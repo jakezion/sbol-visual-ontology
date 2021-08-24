@@ -41,6 +41,12 @@ jobs:
           pip3 install owlready2
           pip3 install rdflib
 
+      # maven dependencies for LODE installed
+      - name: Install LODE dependencies
+        run: |
+          - cd LODE
+          mvn clean install
+
       # maven dependencies for lode-document-extractor installed
       - name: Install maven dependencies
         run: |
