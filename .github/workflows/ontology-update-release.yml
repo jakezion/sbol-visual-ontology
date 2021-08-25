@@ -68,6 +68,7 @@ jobs:
           mkdir -p temp_files
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./sbol-vo.txt   ./temp_files
           cp -u -r ./Glyphs ./temp_files
+          ls ./temp_files
 
       # create glyph folder for use within python scripts
       - name: create default Glyph folder
@@ -91,7 +92,8 @@ jobs:
         run: |
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-          svn copy --force ./Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}
+          svn copy ./Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}
+          ls ./Glyphs
 
         # if tag is not stable update default files to original versions
       - name: restore default files
