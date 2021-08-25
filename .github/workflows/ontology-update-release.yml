@@ -13,6 +13,9 @@ jobs:
           token: ${{ github.token }}
           ref: ${{ github.head_ref }}
 
+      - name: see ref
+        run: echo ${{ github.head_ref }}
+
       # get latest release tag on the SBOL-visual repository
       - name: Get latest release of SBOL Visual
         uses: rez0n/actions-github-release@main
@@ -104,6 +107,7 @@ jobs:
         run: rm -r ./temp_files
 
       # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
+      if: ${{ !failure() }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Created new versions folder and updated default html and rdf file
