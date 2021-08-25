@@ -105,7 +105,6 @@ jobs:
       - name: delete temporary folder
         run: rm -r ./temp_files
 
-
       # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
