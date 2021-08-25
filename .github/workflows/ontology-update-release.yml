@@ -92,8 +92,8 @@ jobs:
         run: |
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-          svn copy ./Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-          ls ./Glyphs
+          cd versions/v${{ steps.sbol-visual-release.outputs.release }}
+          svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
         # if tag is not stable update default files to original versions
       - name: restore default files
