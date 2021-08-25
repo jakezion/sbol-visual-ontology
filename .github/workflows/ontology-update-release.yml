@@ -101,7 +101,7 @@ jobs:
           cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
           cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
           cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
-          cp -f -r ./temp_files/Glyphs ./Glyphs
+          cp -f -r ./temp_files/Glyphs/. ./Glyphs
 
         # if tag is stable delete temp files
       - name: delete temporary folder
