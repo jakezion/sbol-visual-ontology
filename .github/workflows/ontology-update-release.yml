@@ -101,12 +101,12 @@ jobs:
           cp -u ./temp_files/sbol-vo.txt ./sbol-vo.txt
           cp -u -r ./temp_files/Glyphs ./Glyphs
 
-      # if tag is stable delete temp files
+        # if tag is stable delete temp files
       - name: delete temporary folder
         run: rm -r ./temp_files
 
-      # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
-      if: ${{ !failure() }}
+        # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
+        if: ${{ !failure() }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Created new versions folder and updated default html and rdf file
