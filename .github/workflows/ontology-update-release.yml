@@ -98,8 +98,8 @@ jobs:
       - name: restore default files
         run: |
           echo ${{ steps.sbol-visual-release.outputs.release }}
-          echo ${{ steps.sbol-visual-release.outputs.release != '[0-9]+.[0-9]+' }}
-          echo ${{ steps.sbol-visual-release.outputs.release == '[0-9]+.[0-9]+' }}
+          echo ${{ steps.sbol-visual-release.outputs.release != '[0-9]\.[0-9]' }}
+          echo ${{ steps.sbol-visual-release.outputs.release == '[0-9]\.[0-9]' }}
           cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
           cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
           cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
