@@ -67,7 +67,7 @@ jobs:
         run: |
           mkdir -p temp_files
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./sbol-vo.txt   ./temp_files
-          cp -u ./Glyphs ./temp_files
+          cp -u -r ./Glyphs ./temp_files
           ls ./temp_files
 
       # create glyph folder for use within python scripts
