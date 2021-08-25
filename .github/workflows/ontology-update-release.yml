@@ -59,7 +59,6 @@ jobs:
           cd sbol-vo-update-doc
           mvn clean install
 
-
       # create temporary folder for html and rdf files
       - name: create temporary folder
         run: |
@@ -91,8 +90,7 @@ jobs:
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           svn copy --force ./Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}
 
-
-      #if tag is not stable update default files to original versions
+      # if tag is not stable update default files to original versions
       if: ${{ !contains(steps.sbol-visual-release.outputs.release, [0-9].[0-9]) }}
       - name: restore default files
         run: |
@@ -101,7 +99,7 @@ jobs:
           cp -u ./temp_files/sbol-vo.txt ./sbol-vo.txt
           cp -u -r ./temp_files/Glyphs ./Glyphs
 
-      #if tag is stable delete temp files
+      # if tag is stable delete temp files
       - name: delete temporary folder
         run: rm -r ./temp_files
 
