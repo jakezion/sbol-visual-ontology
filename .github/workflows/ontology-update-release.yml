@@ -94,9 +94,10 @@ jobs:
           svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
         # if tag is not stable update default files to original versions
-        if: ${{ steps.sbol-visual-release.outputs.release == '[0-9].[0-9]' }}
+        if: ${{ steps.sbol-visual-release.outputs.release != '[0-9].[0-9]' }}
       - name: restore default files
         run: |
+          echo ${{ steps.sbol-visual-release.outputs.release != '[0-9].[0-9]' }}
           cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
           cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
           cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
