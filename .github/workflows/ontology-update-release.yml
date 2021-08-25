@@ -13,9 +13,6 @@ jobs:
           token: ${{ github.token }}
           ref: ${{ github.head_ref }}
 
-      - name: see ref
-        run: echo ${{ github.head_ref }}
-
       # get latest release tag on the SBOL-visual repository
       - name: Get latest release of SBOL Visual
         uses: rez0n/actions-github-release@main
@@ -68,6 +65,8 @@ jobs:
           mkdir -p temp_files
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./sbol-vo.txt   ./temp_files
           cp -u -r ./Glyphs ./temp_files
+          cd temp_files/Glyphs
+          mkdir tester
           ls ./temp_files
 
       # create glyph folder for use within python scripts
