@@ -90,9 +90,9 @@ jobs:
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           svn copy --force ./Glyphs ./versions/v${{ steps.sbol-visual-release.outputs.release }}
 
-      # if tag is not stable update default files to original versions
-      if: ${{ !contains(steps.sbol-visual-release.outputs.release, [0-9].[0-9]) }}
+        # if tag is not stable update default files to original versions
       - name: restore default files
+        if: ${{ !contains(steps.sbol-visual-release.outputs.release, [0-9].[0-9]) }}
         run: |
           cp -u ./temp_files/sbol-vo.html ./sbol-vo.html
           cp -u ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
