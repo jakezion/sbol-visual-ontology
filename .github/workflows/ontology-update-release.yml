@@ -2,13 +2,9 @@ name: Ontology update testing
 
 on:
   push:
-  release:
-    types: [ published ]
-    tags:
-      - 'v*.*'
 
 jobs:
-  build_dependencies:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +20,7 @@ jobs:
         env:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: "SynBioDex/SBOL-visual"
-          type: "stable"
+          type: "latest"
 
       - name: Set up JDK 8
         uses: actions/setup-java@v2
@@ -45,6 +41,12 @@ jobs:
           pip3 install owlready2
           pip3 install rdflib
 
+      # maven dependencies for LODE installed
+      - name: Install LODE dependencies
+        run: |
+          cd LODE
+          mvn clean install
+
       # maven dependencies for lode-document-extractor installed
       - name: Install maven dependencies
         run: |
@@ -56,6 +58,20 @@ jobs:
         run: |
           cd sbol-vo-update-doc
           mvn clean install
+
+      # create temporary folder for html and rdf files
+      - name: create temporary folder
+        run: |
+          mkdir -p temp_files
+          cp -u ./sbol-vo.html ./sbol-vo.rdf ./sbol-vo.txt   ./temp_files
+          cp -u -r ./Glyphs ./temp_files
+          mkdir -p ./temp_files/Glyphs/tester
+          ls ./temp_files
+
+      # create glyph folder for use within python scripts (needs changing to support non release glyphs
+      - name: create default Glyph folder
+        run: |
+          svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
       # scripts are called in succession: 1. rdf file is updated 2. HTML file is created with default values 3. updated rdf file is used to update HTML file
       - name: Generate new ontology values
@@ -73,13 +89,25 @@ jobs:
       - name: create and populate version folder
         run: |
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
-          cp -u ./sbol-vo.html ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-          cp -u ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-          svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
+          cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           cd versions/v${{ steps.sbol-visual-release.outputs.release }}
           svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
-      # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
+        # if tag is not stable update default files to original versions
+        if: ${{ !contains(steps.sbol-visual-release.outputs.release, '[0-9]\.[0-9]') }}
+      - name: restore default files
+        run: |
+          cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
+          cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
+          cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
+          cp -f -r ./temp_files/Glyphs/. ./Glyphs
+
+        # if tag is stable delete temp files
+      - name: delete temporary folder
+        run: rm -r ./temp_files
+
+        # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
+        if: ${{ !failure() }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Created new versions folder and updated default html and rdf file
