@@ -1,17 +1,17 @@
 name: Ontology update testing
 
 on:
-  push:
-
+  repository_dispatch:
+    types: [new-release]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
         with:
           token: ${{ github.token }}
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.event.client_payload.ref }}
+      - run: echo ${{ github.event.client_payload.sha }}
 
       # get latest release tag on the SBOL-visual repository
       - name: Get latest release of SBOL Visual
@@ -19,8 +19,20 @@ jobs:
         id: sbol-visual-release
         env:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: "SynBioDex/SBOL-visual"
+          repository: "jakezion/SBOL-visual"
           type: "latest"
+
+      - name: Check Tag
+        id: check-tag
+        run: |
+          if [[ ${{ steps.sbol-visual-release.outputs.release }} =~ [0-9]+\.[0-9]+$ ]]; then
+              echo ::set-output name=match::true
+          fi
+      - name: Build
+        if: steps.check-tag.outputs.match == 'true'
+        run: |
+          echo "Tag is a match"
+          echo ${{ steps.sbol-visual-release.outputs.release }}
 
       - name: Set up JDK 8
         uses: actions/setup-java@v2
@@ -71,7 +83,7 @@ jobs:
       # create glyph folder for use within python scripts (needs changing to support non release glyphs
       - name: create default Glyph folder
         run: |
-          svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
+          svn export --force https://github.com/jakezion/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
       # scripts are called in succession: 1. rdf file is updated 2. HTML file is created with default values 3. updated rdf file is used to update HTML file
       - name: Generate new ontology values
@@ -91,11 +103,11 @@ jobs:
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           cd versions/v${{ steps.sbol-visual-release.outputs.release }}
-          svn export --force https://github.com/SynBioDex/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
+          svn export --force https://github.com/jakezion/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
         # if tag is not stable update default files to original versions
-        if: ${{ !contains(steps.sbol-visual-release.outputs.release, '[0-9]\.[0-9]') }}
       - name: restore default files
+        if: steps.check-tag.outputs.match == 'false'
         run: |
           cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
           cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf

@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LODE/LODE.iml" filepath="$PROJECT_DIR$/LODE/LODE.iml" />
       <module fileurl="file://$PROJECT_DIR$/lode-document-extractor/lode-document-extractor.iml" filepath="$PROJECT_DIR$/lode-document-extractor/lode-document-extractor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../sbol-visual-ontology/markdown-to-owl/markdown-to-owl.iml" filepath="$PROJECT_DIR$/../../sbol-visual-ontology/markdown-to-owl/markdown-to-owl.iml" />
+      <module fileurl="file://$USER_HOME$/sbol-visual-ontology/markdown-to-owl/markdown-to-owl.iml" filepath="$USER_HOME$/sbol-visual-ontology/markdown-to-owl/markdown-to-owl.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sbol-visual-ontology.iml" filepath="$PROJECT_DIR$/.idea/sbol-visual-ontology.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbol-vo-update-doc/sbol-vo-update-doc.iml" filepath="$PROJECT_DIR$/sbol-vo-update-doc/sbol-vo-update-doc.iml" />
     </modules>
