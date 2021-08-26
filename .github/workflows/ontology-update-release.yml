@@ -20,7 +20,7 @@ jobs:
         env:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: "jakezion/SBOL-visual"
-          type: "release"
+          type: "latest"
 
       - name: Set up JDK 8
         uses: actions/setup-java@v2
@@ -37,7 +37,7 @@ jobs:
       # python dependencies for markdown-to-owl are installed
       - name: Install python dependencies
         run: |
-          echo ${{ steps.sbol-visual-release.outputs.release }}
+          echo ${{ steps.sbol-visual-release.outputs.latest }}
           cd markdown-to-owl
           pip3 install owlready2
           pip3 install rdflib
