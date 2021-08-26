@@ -19,7 +19,7 @@ jobs:
         id: sbol-visual-release
         env:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: "SynBioDex/SBOL-visual"
+          repository: "Synbiodex/SBOL-visual"
           type: "latest"
 
       - name: Set up JDK 8
