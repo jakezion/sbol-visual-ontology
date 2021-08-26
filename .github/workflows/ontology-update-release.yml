@@ -19,7 +19,7 @@ jobs:
         id: sbol-visual-release
         env:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: "jakezion/SBOL-visual"
+          repository: "jakezion/SBOL-visual-test"
           type: "latest"
 
       - name: Check Tag
