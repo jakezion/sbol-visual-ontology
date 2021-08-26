@@ -83,7 +83,7 @@ jobs:
       # create glyph folder for use within python scripts (needs changing to support non release glyphs
       - name: create default Glyph folder
         run: |
-          svn export --force https://github.com/jakezion/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
+          svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
       # scripts are called in succession: 1. rdf file is updated 2. HTML file is created with default values 3. updated rdf file is used to update HTML file
       - name: Generate new ontology values
@@ -103,7 +103,7 @@ jobs:
           mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
           cd versions/v${{ steps.sbol-visual-release.outputs.release }}
-          svn export --force https://github.com/jakezion/SBOL-visual/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
+          svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ steps.sbol-visual-release.outputs.release }}/Glyphs
 
         # if tag is not stable update default files to original versions
       - name: restore default files
