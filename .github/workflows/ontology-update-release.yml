@@ -1,17 +1,17 @@
 name: Ontology update testing
 
 on:
-  push:
-
+  repository_dispatch:
+    types: [new-release]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
         with:
           token: ${{ github.token }}
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.event.client_payload.ref }}
+      - run: echo ${{ github.event.client_payload.sha }}
 
       # get latest release tag on the SBOL-visual repository
       - name: Get latest release of SBOL Visual
