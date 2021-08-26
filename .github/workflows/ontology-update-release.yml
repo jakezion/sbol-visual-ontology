@@ -9,8 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.client_payload.ref }}
-      - run: echo ${{ github.event.client_payload.sha }}
+          token: ${{ github.token }}
+          ref: ${{ github.head_ref }}
+      - run: echo ${{ github.event.client_payload.ref }}
 
       # get latest release tag on the SBOL-visual repository
       - name: Get latest release of SBOL Visual
