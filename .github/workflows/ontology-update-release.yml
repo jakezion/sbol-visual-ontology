@@ -37,6 +37,7 @@ jobs:
       # python dependencies for markdown-to-owl are installed
       - name: Install python dependencies
         run: |
+          echo ${{ steps.sbol-visual-release.outputs.release }}
           cd markdown-to-owl
           pip3 install owlready2
           pip3 install rdflib
