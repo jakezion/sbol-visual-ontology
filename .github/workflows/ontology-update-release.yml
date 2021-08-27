@@ -94,7 +94,7 @@ jobs:
 
       - name: update css files in versioned html file
         run: |
-          sed -f "s|../lode-document_files|lode-document-files|g" versions/${{ env.TAG_VAL }}/sbol-vo.html
+          sed -f -i 's|../lode-document_files|lode-document-files|g' versions/${{ env.TAG_VAL }}/sbol-vo.html
 
         # check if tag released is of the verified format e.g. *.*
       - name: Check tag for release type
