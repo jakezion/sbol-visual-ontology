@@ -100,7 +100,7 @@ jobs:
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/${{ env.TAG_VAL }}
           cp -u -r ./sbol-vo_files ./versions/${{ env.TAG_VAL }}
           cd versions/${{ env.TAG_VAL }}
-          sed -i 's|../lode-document_files/lode_files|sbol-vo_files|g' sbol-vo.html
+          sed -i 's|./lode-document_files/lode_files|sbol-vo_files|g' sbol-vo.html
           svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
 
         # if tag is not stable update default files to original versions
