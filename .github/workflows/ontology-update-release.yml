@@ -11,7 +11,12 @@ jobs:
         with:
           token: ${{ github.token }}
           ref: ${{ github.head_ref }}
-        run: echo "RELEASE_VERSION=${${{ github.event.client_payload.ref }}#refs/*/}" >> $GITHUB_ENV
+
+      # get latest release tag on the SBOL-visual repository
+      - name: Get latest release of SBOL Visual from payload
+        id: tag-version
+        run: |
+          echo RELEASE_VERSION=${${{ github.event.client_payload.ref }}#refs/*/} >> $GITHUB_ENV
 
       - name: Check tag for release type
         id: check-tag
