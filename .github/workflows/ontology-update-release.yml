@@ -67,13 +67,6 @@ jobs:
           cd sbol-vo-update-doc
           mvn clean install
 
-      # create temporary folder for html and rdf files
-      - name: create temporary folder
-        run: |
-          mkdir -p temp_files
-          cp -u ./sbol-vo.html ./sbol-vo.rdf ./sbol-vo.txt   ./temp_files
-          cp -u -r ./Glyphs ./temp_files
-
       # create glyph folder for use within python scripts (needs changing to support non release glyphs
       - name: create default Glyph folder
         run: |
@@ -94,4 +87,4 @@ jobs:
         # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: test update test update
+          commit_message: Created new versions folder and updated default html and rdf file
