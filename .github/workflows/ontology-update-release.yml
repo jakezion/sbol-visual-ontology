@@ -18,12 +18,12 @@ jobs:
         id: tag-version
         run: |
           echo ::set-output name=TAG::${${{ github.event.client_payload.ref }}#refs/tags/}
-
+          echo "TAG=${${{ github.event.client_payload.ref }}/refs\/tags\//}" >> $GITHUB_ENV
 
       - name: Check tag for release type
         id: check-tag
         run: |
-          echo ${{ steps.tag-version.outputs.TAG }}
+          echo ${{ env.TAG }}
           if [[ ${{ github.event.client_payload.ref }} =~ ^ref/tags/[0-9]+\.[0-9]+$ ]]; then
               echo ::set-output name=match::true
           fi
