@@ -35,11 +35,11 @@ public class lodedocumentextractor {
 
         System.out.println("...");
 
-        File input = new File("../sbol-vo.rdf");//TODO: pass as parameter
-        File output = new File("../sbol-vo.html");//TODO: pass as parameter
+        File input = new File("./sbol-vo.rdf");//TODO: pass as parameter
+        File output = new File("./sbol-vo.html");//TODO: pass as parameter
 
-        String xsltURL = "../lode-document_files/extraction.xsl"; //TODO: pass as parameter
-        String cssLocation = "../lode-document_files/lode_files" + File.separator;
+        String xsltURL = "./lode-document_files/extraction.xsl"; //TODO: pass as parameter
+        String cssLocation = "./lode-document_files/lode_files" + File.separator;
 
         SourceExtractor extractor = new SourceExtractor();
         extractor.addMimeTypes(MimeType.mimeTypes);
