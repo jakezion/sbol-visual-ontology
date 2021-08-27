@@ -77,6 +77,7 @@ jobs:
       # create glyph folder for use within python scripts (needs changing to support non release glyphs
       - name: create default Glyph folder
         run: |
+          rm -r ./Glyphs
           svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
 
         if: ${{ !failure() }}
