@@ -115,7 +115,7 @@ jobs:
 
         # if tag is not stable update default files to original versions
       - name: restore default files
-        if: steps.check-tag.outputs.match == "false"
+        if: steps.check-tag.outputs.match == 'false'
         run: |
           echo "running"
           ${{ steps.check-tag.outputs.match }}
