@@ -18,7 +18,7 @@ jobs:
         run: |
 
           RELEASE_VERSION=${{ github.event.client_payload.ref }}
-          echo "${$RELEASE_VERSION##*/ }"
+          echo "$RELEASE_VERSION##*/"
 
 
       - name: Check tag for release type
