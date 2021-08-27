@@ -67,10 +67,22 @@ jobs:
           cd sbol-vo-update-doc
           mvn clean install
 
+      # create temporary folder for html and rdf files
+      - name: create temporary folder
+        run: |
+          mkdir -p temp_files
+          cp -u ./sbol-vo.html ./sbol-vo.rdf ./sbol-vo.txt   ./temp_files
+          cp -u -r ./Glyphs ./temp_files
+
       # create glyph folder for use within python scripts (needs changing to support non release glyphs
       - name: create default Glyph folder
         run: |
           svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
+
+        if: ${{ !failure() }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: commit new glyphs for main generation
 
       # scripts are called in succession: 1. rdf file is updated 2. HTML file is created with default values 3. updated rdf file is used to update HTML file
       - name: Generate new ontology values
@@ -84,6 +96,32 @@ jobs:
           cd ../sbol-vo-update-doc
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
+      # 1. versions folder is updated with new tag value 2. parent html, rdf and glyphs files are copied to new versions folder 3. glyph folder is created at parent directory for use in web service
+      - name: create and populate version folder
+        run: |
+          mkdir -p versions/${{ env.TAG_VAL }}
+          cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/${{ env.TAG_VAL }}
+          cp -u -r ./sbol-vo_files ./versions/${{ env.TAG_VAL }}
+          cd versions/${{ env.TAG_VAL }}
+          sed -i 's|../lode-document_files|lode-document-files|g' sbol-vo.html
+          svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
+
+        # if tag is not stable update default files to original versions
+      - name: restore default files
+        if: ${{ env.RELEASE_TYPE == 'false' }}
+        run: |
+          echo "running"
+          cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
+          cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
+          cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
+          cp -f -r ./temp_files/Glyphs/. ./Glyphs
+
+        # if tag is stable delete temp files
+      - name: delete temporary folder
+        run: rm -r ./temp_files
+
+        # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
+        if: ${{ !failure() }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Created new versions folder and updated default html and rdf file
