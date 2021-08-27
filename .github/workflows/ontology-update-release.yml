@@ -24,9 +24,10 @@ jobs:
       - name: Check tag for release type
         id: check-tag
         run: |
-          echo ${{ env.TAG_VAL }}
           if [[ ${{ env.TAG_VAL }} =~ [0-9]+\.[0-9]+$ ]]; then
-              echo ::set-output name=match::true
+              echo "TAG_VAL=true" >> $GITHUB_ENV
+          else
+             echo "TAG_VAL=false" >> $GITHUB_ENV
           fi
 
       - name: Build
