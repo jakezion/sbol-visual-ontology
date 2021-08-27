@@ -2,7 +2,7 @@ name: Ontology update testing
 
 on:
   repository_dispatch:
-    types: [ new-release ]
+    types: [new-release]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,17 +12,20 @@ jobs:
           token: ${{ github.token }}
           ref: ${{ github.head_ref }}
 
+
       # get latest release tag on the SBOL-visual repository
-      - name: Get latest release of SBOL Visual from payload
-        id: tag-version
-        run: |
-          echo "::set-output name=RELEASE_VERSION::${{github.event.client_payload.ref}}##*/"
+      - name: Get latest release of SBOL Visual
+        uses: rez0n/actions-github-release@main
+        id: sbol-visual-release
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: "SynBioDex/SBOL-visual"
+          type: "stable"
 
       - name: Check tag for release type
         id: check-tag
         run: |
-          echo ${{ steps.tag-version.outputs.RELEASE_VERSION }}
-          if [[ ${{ steps.tag-version.outputs.RELEASE_VERSION }} =~ [0-9]+\.[0-9]+$ ]]; then
+          if [[ ${{ github.event.client_payload.ref }} =~ ^ref/tags/[0-9]+\.[0-9]+$ ]]; then
               echo ::set-output name=match::true
           fi
 
