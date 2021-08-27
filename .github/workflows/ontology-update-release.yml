@@ -16,9 +16,10 @@ jobs:
       - name: Get latest release of SBOL Visual from payload
         id: tag-version
         run: |
-          full-tag="${{github.event.client_payload.ref}}"
-          echo $full-tag
-          echo "::set-output name=RELEASE_VERSION::${ $full-tag##*/}"
+          GITHUB_REF="${{github.event.client_payload.ref}}"
+          echo $GITHUB_REF
+          echo "::set-output name=GITHUB_REF::${{github.event.client_payload.ref}}"
+          echo "::set-output name=RELEASE_VERSION::${ GITHUB_REF##*/}"
 
       - name: Check tag for release type
         id: check-tag
