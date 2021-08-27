@@ -78,6 +78,7 @@ jobs:
       - name: create default Glyph folder
         run: |
           rm -r ./Glyphs
+          ls
           svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
 
         if: ${{ !failure() }}
