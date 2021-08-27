@@ -81,11 +81,6 @@ jobs:
           ls
           svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
 
-        if: ${{ !failure() }}
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: commit new glyphs for main generation
-
       # scripts are called in succession: 1. rdf file is updated 2. HTML file is created with default values 3. updated rdf file is used to update HTML file
       - name: Generate new ontology values
         run: |
