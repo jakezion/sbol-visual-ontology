@@ -25,13 +25,13 @@ jobs:
         id: check-tag
         run: |
           if [[ ${{ env.TAG_VAL }} =~ [0-9]+\.[0-9]+$ ]]; then
-              echo "TAG_VAL=true" >> $GITHUB_ENV
+              echo "RELEASE_TYPE=true" >> $GITHUB_ENV
           else
-             echo "TAG_VAL=false" >> $GITHUB_ENV
+             echo "RELEASE_TYPE=false" >> $GITHUB_ENV
           fi
 
       - name: Build
-        if: steps.check-tag.outputs.match == 'true'
+        if: ${{ env.RELEASE_TYPE == 'true' }}
         run: |
           echo "Tag is a match"
           echo ${{ env.TAG_VAL }}
@@ -114,14 +114,13 @@ jobs:
           cd versions/${{ env.TAG_VAL }}
           sed -i 's|../lode-document_files|lode-document-files|g' sbol-vo.html
 
-      - run: echo ${{ steps.check-tag.outputs.match }}
+      - run: echo ${{ env.RELEASE_TYPE  }}
 
         # if tag is not stable update default files to original versions
-        if: steps.check-tag.outputs.match == 'false'
+        if: ${{ env.RELEASE_TYPE == 'false' }}
       - name: restore default files
         run: |
           echo "running"
-          echo ${{ steps.check-tag.outputs.match }}
           cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
           cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
           cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
