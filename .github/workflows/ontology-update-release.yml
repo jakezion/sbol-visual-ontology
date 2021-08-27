@@ -20,20 +20,6 @@ jobs:
           REF_TAG=${{ github.event.client_payload.ref }}
           echo "TAG_VAL=${REF_TAG##*/}" >> $GITHUB_ENV
 
-
-      - name: Check tag for release type
-        id: check-tag
-        run: |
-          if [[ ${{ env.TAG_VAL}} =~ [0-9]+\.[0-9]+$ ]]; then
-              echo ::set-output name=match::true
-          fi
-
-      - name: Build
-        if: steps.check-tag.outputs.match == 'true'
-        run: |
-          echo "Tag is a match"
-          echo ${{ env.TAG_VAL }}
-
       - name: Set up JDK 8
         uses: actions/setup-java@v2
         with:
@@ -100,19 +86,35 @@ jobs:
       # 1. versions folder is updated with new tag value 2. parent html, rdf and glyphs files are copied to new versions folder 3. glyph folder is created at parent directory for use in web service
       - name: create and populate version folder
         run: |
-          mkdir -p versions/v${{ steps.sbol-visual-release.outputs.release }}
-          cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/v${{ steps.sbol-visual-release.outputs.release }}
-          cd versions/v${{ steps.sbol-visual-release.outputs.release }}
+          mkdir -p versions/${{ env.TAG_VAL }}
+          cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/${{ env.TAG_VAL }}
+          cp -u -r ./sbol-vo_files ./versions/${{ env.TAG_VAL }}
+          cd versions/${{ env.TAG_VAL }}
           svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
+
+      - name: update css files in versioned html file
+        run: |
+          sed -f 's/../lode-document_files/lode-document-files/g' versions/${{ env.TAG_VAL }}/sbol-vo.html
+
+        # check if tag released is of the verified format e.g. *.*
+      - name: Check tag for release type
+        id: check-tag
+        run: |
+          if [[ ${{ env.TAG_VAL}} =~ [0-9]+\.[0-9]+$ ]]; then
+              echo ::set-output name=match::true
+              echo "TAG_VAL=${REF_TAG##*/}" >> $GITHUB_ENV
+          fi
 
         # if tag is not stable update default files to original versions
       - name: restore default files
-        if: steps.check-tag.outputs.match == 'false'
+        if: ${{ steps.check-tag.outputs.match }} == 'false'
         run: |
-          cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
-          cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
-          cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
-          cp -f -r ./temp_files/Glyphs/. ./Glyphs
+          if [[ ${{ env.TAG_VAL}} =~ [0-9]+\.[0-9]+$ ]]; then
+              cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
+              cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
+              cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
+              cp -f -r ./temp_files/Glyphs/. ./Glyphs
+          fi
 
         # if tag is stable delete temp files
       - name: delete temporary folder
