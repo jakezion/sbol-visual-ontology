@@ -113,12 +113,14 @@ jobs:
           cd versions/${{ env.TAG_VAL }}
           sed -i 's|../lode-document_files|lode-document-files|g' sbol-vo.html
 
+      - run: echo ${{ steps.check-tag.outputs.match }}
+
         # if tag is not stable update default files to original versions
-      - name: restore default files
         if: steps.check-tag.outputs.match == 'false'
+      - name: restore default files
         run: |
           echo "running"
-          ${{ steps.check-tag.outputs.match }}
+          echo ${{ steps.check-tag.outputs.match }}
           cp -f ./temp_files/sbol-vo.html ./sbol-vo.html
           cp -f ./temp_files/sbol-vo.rdf ./sbol-vo.rdf
           cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
