@@ -2,7 +2,7 @@ name: Ontology update testing
 
 on:
   repository_dispatch:
-    types: [new-release]
+    types: [ new-release ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,8 +22,8 @@ jobs:
       - name: Check tag for release type
         id: check-tag
         run: |
-          echo $RELEASE_VERSION
-          if [[ $RELEASE_VERSION =~ [0-9]+\.[0-9]+$ ]]; then
+          echo ${{ env.RELEASE_VERSION }}
+          if [[ ${{ env.RELEASE_VERSION }} =~ [0-9]+\.[0-9]+$ ]]; then
               echo ::set-output name=match::true
           fi
 
