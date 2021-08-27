@@ -91,6 +91,21 @@ jobs:
           cd ../sbol-vo-update-doc
           mvn exec:java -e -Dexec.mainClass="uk.ac.keele.dissys.sbolvo.html.App"
 
+        # updated are committed and pushed to the repository on current branch (looping doesnt occur due to limitations in github actions)
+        if: ${{ !failure() }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Created new top level files
+
+      - name: "Run if changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: echo "Changes!"
+
+      - name: "Run if no changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'false'
+        run: echo "No Changes!"
+
+
       # 1. versions folder is updated with new tag value 2. parent html, rdf and glyphs files are copied to new versions folder 3. glyph folder is created at parent directory for use in web service
       - name: create and populate version folder
         run: |
@@ -111,7 +126,6 @@ jobs:
           cp -f ./temp_files/sbol-vo.txt ./sbol-vo.txt
           cp -f -r ./temp_files/Glyphs/. ./Glyphs
 
-
         # if tag is stable delete temp files
       - name: delete temporary folder
         run: rm -r ./temp_files
@@ -121,3 +135,12 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Created new versions folder and updated default html and rdf file
+
+      - name: "Run if changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: echo "Changes!"
+
+      - name: "Run if no changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'false'
+        run: echo "No Changes!"
+
