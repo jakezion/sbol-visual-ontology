@@ -15,7 +15,6 @@ jobs:
       # get latest release tag on the SBOL-visual repository
       - name: Get latest release of SBOL Visual from payload
         id: tag-version
-        shell: bash
         run: |
           echo "::set-env name=RELEASE_VERSION::${${{ github.event.client_payload.ref }}/refs\/tags\//}"
 
@@ -23,7 +22,7 @@ jobs:
         id: check-tag
         run: |
           echo ${{ steps.tag-version.outputs.RELEASE_VERSION }}
-          if [[ ${{ env.RELEASE_VERSION }} =~ [0-9]+\.[0-9]+$ ]]; then
+          if [[ ${{ steps.tag-version.outputs.RELEASE_VERSION }} =~ [0-9]+\.[0-9]+$ ]]; then
               echo ::set-output name=match::true
           fi
 
