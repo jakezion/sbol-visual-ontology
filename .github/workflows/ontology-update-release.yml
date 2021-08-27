@@ -35,7 +35,7 @@ jobs:
         run: |
           echo "Tag is a match"
           echo ${{ env.TAG_VAL }}
-          echo ${{ steps.check-tag.outputs.match }}
+          echo ${{ env.RELEASE_TYPE }}
 
       - name: Set up JDK 8
         uses: actions/setup-java@v2
