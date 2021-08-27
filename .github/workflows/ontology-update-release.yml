@@ -16,7 +16,7 @@ jobs:
       - name: Get latest release of SBOL Visual from payload
         id: tag-version
         run: |
-          echo "RELEASE_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
+
           RELEASE_VERSION=${{ github.event.client_payload.ref }}
           echo "${$RELEASE_VERSION##*/ }"
 
