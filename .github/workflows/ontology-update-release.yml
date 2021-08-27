@@ -17,8 +17,9 @@ jobs:
         id: tag-version
         run: |
           echo "::set-output name=TAG_REF::${{github.event.client_payload.ref}}"
-          echo steps.tag-version.outputs.TAG_REF
-          echo "::set-output name=RELEASE_VERSION::${ $TAG_REF##*/ }"
+
+      - run: echo steps.tag-version.outputs.TAG_REF
+      - run: echo "::set-output name=RELEASE_VERSION::${ $TAG_REF##*/ }"
 
       - name: Check tag for release type
         id: check-tag
