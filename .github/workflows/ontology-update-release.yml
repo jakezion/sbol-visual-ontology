@@ -30,12 +30,6 @@ jobs:
              echo "RELEASE_TYPE=false" >> $GITHUB_ENV
           fi
 
-      - name: Build
-        if: ${{ env.RELEASE_TYPE == 'true' }}
-        run: |
-          echo "Tag is a match"
-          echo ${{ env.TAG_VAL }}
-
       - name: Set up JDK 8
         uses: actions/setup-java@v2
         with:
@@ -79,8 +73,6 @@ jobs:
           mkdir -p temp_files
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./sbol-vo.txt   ./temp_files
           cp -u -r ./Glyphs ./temp_files
-          mkdir -p ./temp_files/Glyphs/tester
-          ls ./temp_files
 
       # create glyph folder for use within python scripts (needs changing to support non release glyphs
       - name: create default Glyph folder
@@ -106,12 +98,8 @@ jobs:
           cp -u ./sbol-vo.html ./sbol-vo.rdf ./versions/${{ env.TAG_VAL }}
           cp -u -r ./sbol-vo_files ./versions/${{ env.TAG_VAL }}
           cd versions/${{ env.TAG_VAL }}
-          svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
-
-      - name: update css files in versioned html file
-        run: |
-          cd versions/${{ env.TAG_VAL }}
           sed -i 's|../lode-document_files|lode-document-files|g' sbol-vo.html
+          svn export --force https://github.com/jakezion/SBOL-visual-test/tags/${{ env.TAG_VAL }}/Glyphs
 
         # if tag is not stable update default files to original versions
       - name: restore default files
