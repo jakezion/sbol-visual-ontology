@@ -19,7 +19,7 @@ import org.jsoup.select.Elements;
  */
 public class App {
     private static String sbolbase = "http://sbols.org/visual/v3#";
-   //private static String sbolbase = "http://sbols.org/visual/v2#";
+    //private static String sbolbase = "http://sbols.org/visual/v2#";
     /*Steps (Make sure the remote and online Github repo includes the latest sbol.rdf)
      * 1- Remove the sbol-owl-org.htm
      * 2- Take a copy of the LODE from Github: git clone https://github.com/essepuntato/LODE.git
@@ -94,10 +94,9 @@ public class App {
             //Get the directory name, and find out the full glyph path
             Statement stmtDir = r.getProperty(glyphDir);
             String dir = stmtDir.getLiteral().asLiteral().getString();
-            dir = dir.replace("SBOL-visual/", ""); //TODO: remove, unused post v2.3
-            //value=String.format("https://raw.githubusercontent.com/SynBioDex/SBOL-visual/blob/master/%s/%s", dir, value);
-            value = String.format("http://synbiodex.github.io/SBOL-visual/%s/%s", dir, value);
-            //value = String.format("http://synbiodex.github.io/sbol-visual-ontology/%s/%s", dir, value);
+            // dir = dir.replace("SBOL-visual/", ""); //TODO: remove, unused post v2.3
+            // value = String.format("http://synbiodex.github.io/SBOL-visual/%s/%s", dir, value);
+            value = String.format("http://synbiodex.github.io/sbol-visual-ontology/%s/%s", dir, value);
 
             //Find the dl tag to add the image in
             //Find the a tag using the name
@@ -110,7 +109,6 @@ public class App {
 
             //Add the image
             String imageTag = String.format("<dt>default glyph</dt><dd><img src='%s'></dd>", value);
-            //System.out.println(imageTag);
             dl.append(imageTag);
         }
 
@@ -118,7 +116,6 @@ public class App {
         cleanHeaders(doc);
 
         //final File f = new File("../sbol-vo.html");
-        System.out.println("writing file");
         //System.out.println(source.toString());
 
         FileUtils.writeStringToFile(source, doc.outerHtml(), "UTF-8");
