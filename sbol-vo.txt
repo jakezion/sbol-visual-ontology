@@ -1723,119 +1723,6 @@ Unspecified is RECOMMENDED to be represented by the unicode "replacement charact
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*this section deliberately blank*</notes>
 </owl:Class>
 
-<owl:Class rdf:about="#ProcessGlyph">
-  <rdfs:subClassOf rdf:resource="#Glyph"/>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#hasIncoming"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#role"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000010"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#hasOutgoing"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#role"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000011"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf rdf:resource="#InteractionNodeGlyph"/>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#isGlyphOf"/>
-      <owl:someValuesFrom rdf:resource="http://sbols.org/v3#Interaction"/>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#isGlyphOf"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#type"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000375"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A square node:</rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProcessGlyph</rdfs:label>
-  <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">process-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/InteractionNodes/process</glyphDirectory>
-  <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
-  <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaction process of citrate and aconitase to produce cis-aconitate.</prototypicalExample>
-  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process glyph is based on the SBGN Process Description process glyph.
-
-The assocated SBO term also covers:
-
-- SBO:0000176 Biochemical Reaction
-- SBO:0000177 Non-covalent Binding (sink is a Complex)
-
-Examples of RECOMMENDED usage:
-
-- Biochemical reaction process of the reactant citrate and the catalyst aconitase to produce the product cis-aconitate:
-
-  ![process example](process-example.png)</notes>
-</owl:Class>
-
-<owl:Class rdf:about="#AssociationGlyph">
-  <rdfs:subClassOf rdf:resource="#Glyph"/>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#hasIncoming"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#role"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000010"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#hasOutgoing"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#role"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000011"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf rdf:resource="#InteractionNodeGlyph"/>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#isGlyphOf"/>
-      <owl:someValuesFrom rdf:resource="http://sbols.org/v3#Interaction"/>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#isGlyphOf"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#type"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000177"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A circular node:</rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssociationGlyph</rdfs:label>
-  <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">association-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/InteractionNodes/association</glyphDirectory>
-  <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
-  <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Association of gRNA and Cas9 to form an active CRISPR complex.</prototypicalExample>
-  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The association glyph is based on the SBGN Process Description association glyph.</notes>
-</owl:Class>
-
 <owl:Class rdf:about="#UnspecifiedNodeGlyph">
   <rdfs:subClassOf rdf:resource="#Glyph"/>
   <rdfs:subClassOf>
@@ -1876,57 +1763,6 @@ Examples of RECOMMENDED usage:
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that there are no outgoing edges for the Unspecified interaction, because there is no difference in roles to indicate.
 
 The Unspecified glyph is intended for showing where information about an interaction is missing. It should not generally appear with well-curated designs or diagrams.</notes>
-</owl:Class>
-
-<owl:Class rdf:about="#DissociationGlyph">
-  <rdfs:subClassOf rdf:resource="#Glyph"/>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#hasIncoming"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#role"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000010"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#hasOutgoing"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#role"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000011"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf rdf:resource="#InteractionNodeGlyph"/>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#isGlyphOf"/>
-      <owl:someValuesFrom rdf:resource="http://sbols.org/v3#Interaction"/>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:subClassOf>
-    <owl:Restriction>
-      <owl:onProperty rdf:resource="#isGlyphOf"/>
-      <owl:someValuesFrom>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="http://sbols.org/v3#type"/>
-          <owl:someValuesFrom rdf:resource="http://identifiers.org/sbo/SBO:0000180"/>
-        </owl:Restriction>
-      </owl:someValuesFrom>
-    </owl:Restriction>
-  </rdfs:subClassOf>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An circular node inside another circle</rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DissociationGlyph</rdfs:label>
-  <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dissociation-specification.png</defaultGlyph>
-  <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/InteractionNodes/dissociation</glyphDirectory>
-  <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
-  <prototypicalExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dissociation of an active CRISPR complex into gRNA and Cas9.</prototypicalExample>
-  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The dissociation glyph is based on the SBGN Process Description dissociation glyph.</notes>
 </owl:Class>
 
 <owl:Class rdf:about="#StimulationGlyph">
@@ -1980,7 +1816,7 @@ The Unspecified glyph is intended for showing where information about an interac
   <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*This section left intentionally blank*</notes>
 </owl:Class>
 
-<owl:Class rdf:about="#ProcessInteractionGlyph">
+<owl:Class rdf:about="#ProcessGlyph">
   <rdfs:subClassOf rdf:resource="#Glyph"/>
   <rdfs:subClassOf>
     <owl:Restriction>
@@ -2034,7 +1870,7 @@ The Unspecified glyph is intended for showing where information about an interac
     </owl:Restriction>
   </rdfs:subClassOf>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An arrow with a filled head the same color as the line:</rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProcessInteractionGlyph</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProcessGlyph</rdfs:label>
   <defaultGlyph rdf:datatype="http://www.w3.org/2001/XMLSchema#string">process-specification.png</defaultGlyph>
   <glyphDirectory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glyphs/Interactions/process</glyphDirectory>
   <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
